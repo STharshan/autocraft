@@ -21,7 +21,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gray-300 dark:bg-black px-4 text-black dark:text-white font-semibold shadow-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black dark:bg-[#242427]/80  px-4 text-white dark:text-white font-semibold shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <img src="/logo.avif" alt="Logo" className="h-20 object-contain xl:ml-15" />
