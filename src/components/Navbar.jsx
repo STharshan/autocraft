@@ -84,7 +84,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-3 px-4 pb-6 space-y-4 text-black dark:text-white bg-white dark:bg-black">
+        <div className="md:hidden mt-1 px-4 pb-6 pt-3 space-y-4 text-black dark:text-white bg-white dark:bg-black">
           <a href="/about" className="block border-b border-gray-300 dark:border-gray-700 pb-2 hover:text-yellow-500">ABOUT</a>
           <a href="/gallery" className="block border-b border-gray-300 dark:border-gray-700 pb-2 hover:text-yellow-500">GALLERY</a>
           <a href="/pricing" className="block border-b border-gray-300 dark:border-gray-700 pb-2 hover:text-yellow-500">PRICING</a>
