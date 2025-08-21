@@ -5,6 +5,7 @@ import ServiceSection from '../components/Home/ServiceSection'
 import TestimonialsSection from '../components/Home/TestimonialsSection'
 import GallerySlider from '../components/Home/GallerySlider'
 import PrecisionRepairs from '../components/Home/PrecisionRepairs'
+import FindUs from '../components/Home/Findus'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <TestimonialsSection />
       <GallerySlider />
       <PrecisionRepairs/>
+      <FindUs />
     </div>
   )
 }
