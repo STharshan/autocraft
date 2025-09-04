@@ -12,7 +12,9 @@ const Footer = () => {
           <p>107 frisby road</p>
           <p>Leicester</p>
           <p>le5</p>
-          <FaInstagram className="text-xl mt-10 hover:text-pink-500 cursor-pointer" />
+          <a href="https://www.instagram.com/knucklebuster_nikita/channel/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="text-xl mt-10 hover:text-pink-500 cursor-pointer" />
+          </a>
         </div>
 
         {/* Center - Pages */}
@@ -30,12 +32,23 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           {/* Email + Phone */}
           <div className="flex flex-col gap-2">
+            {/* Email link */}
             <div className="flex justify-between items-center border-b pb-1 group cursor-pointer hover:border-yellow-400 transition-all duration-200 dark:border-gray-800">
-              <span className="group-hover:translate-x-5.5 transition-transform duration-500">Gags@nikitaautocraft.co.uk</span>
+              <a href="mailto:Gags@nikitaautocraft.co.uk" target='_blank' className="group-hover:translate-x-5.5 transition-transform duration-500">
+                Gags@nikitaautocraft.co.uk
+              </a>
               <FaArrowRight className="group-hover:-translate-x-5.5 transition-transform duration-500" />
             </div>
+
+            {/* Phone number with WhatsApp link */}
             <div className="flex justify-between items-center border-b pb-1 group cursor-pointer hover:border-yellow-400 transition-all duration-200 dark:border-gray-800">
-              <span className="group-hover:translate-x-5.5 transition-transform duration-500">0116 251 2277</span>
+              <a
+                href="tel:01162512277"
+                target='_blank'
+                className="group-hover:translate-x-5.5 transition-transform duration-500"
+              >
+                0116 251 2277
+              </a>
               <FaArrowRight className="group-hover:-translate-x-5.5 transition-transform duration-500" />
             </div>
           </div>

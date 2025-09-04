@@ -66,10 +66,12 @@ const PaintWorkSection = () => {
 
       {/* Contact Button */}
       <div className="mt-10">
-        <button className="bg-black dark:bg-gray-200 text-white dark:text-black font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-300 transition-colors">
-          <span>CONTACT US</span>
-          <FaArrowRight className="text-yellow-300" />
-        </button>
+        <a href="/contact">
+          <button className="bg-black dark:bg-gray-200 text-white dark:text-black font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-300 transition-colors">
+            <span>CONTACT US</span>
+            <FaArrowRight className="text-yellow-300" />
+          </button>
+        </a>
       </div>
       <div className="absolute left-0 w-full z-10 px-4 mt-20 border-t border-gray-300 dark:border-gray-800"></div>
     </section>

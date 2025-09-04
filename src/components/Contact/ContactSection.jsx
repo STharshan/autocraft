@@ -42,9 +42,15 @@ const ContactSection = () => {
           We’re open Monday to Saturday, ready to serve your car repair needs.
         </p>
 
-        <button className="mt-4 text-gray-700 dark:text-yellow-300 cursor-pointer text-sm font-semibold border-b border-gray-300 dark:border-gray-700 pt-2 transition-all">
-          VIEW DIRECTIONS
-        </button>
+        <a
+          href="https://www.google.com/maps?q=Nikita+Autocraft,+107+Frisby+Rd,+Leicester+LE5+0DQ,+United+Kingdom"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="mt-4 text-gray-700 dark:text-yellow-300 cursor-pointer text-sm font-semibold hover:border-b border-gray-300 dark:border-gray-700 pt-2 transition-all">
+            VIEW DIRECTIONS
+          </button>
+        </a>
       </div>
 
       {/* LET'S TALK CARD */}
@@ -76,12 +82,23 @@ const ContactSection = () => {
 
         {/* Contact Info */}
         <div className="text-sm text-gray-700 dark:text-gray-300 space-y-2">
+          {/* Email link */}
           <div className="group flex justify-between items-center border-b border-gray-300 dark:border-gray-700 hover:border-yellow-300 cursor-pointer py-2 transition-all duration-300 transform hover:translate-x-1">
-            <span className="group-hover:translate-x-5.5 transition-transform duration-500 ">Gags@nikitaautocraft.com</span>
+            <a href="mailto:Gags@nikitaautocraft.com" target="_blank" className="group-hover:translate-x-5.5 transition-transform duration-500">
+              Gags@nikitaautocraft.com
+            </a>
             <FaArrowRight className="text-gray-500 group-hover:-translate-x-5.5 transition-transform duration-500" size={12} />
           </div>
+
+          {/* Phone number link for WhatsApp */}
           <div className="group flex justify-between items-center border-b border-gray-300 dark:border-gray-700 hover:border-yellow-300 cursor-pointer py-2 transition-all duration-300 transform hover:translate-x-1">
-            <span className="group-hover:translate-x-5.5 transition-transform duration-500">0116 251 2277</span>
+            <a
+              href="tel:+441162512277"
+              className="group-hover:translate-x-5.5 transition-transform duration-500"
+              target="_blank"
+            >
+              +44 116 251 2277
+            </a>
             <FaArrowRight className="text-gray-500 group-hover:-translate-x-5.5 transition-transform duration-500" size={12} />
           </div>
         </div>
@@ -89,7 +106,10 @@ const ContactSection = () => {
         {/* Socials */}
         <p className="text-gray-500 dark:text-gray-400 mt-6">We’re on socials too!</p>
         <div className="mt-2 flex justify-center">
-          <FaInstagram className="text-black dark:text-yellow-300 cursor-pointer" size={18} />
+          {/* Instagram icon wrapped with a link */}
+          <a href="https://www.instagram.com/knucklebuster_nikita/channel/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="text-black dark:text-yellow-300 cursor-pointer" size={18} />
+          </a>
         </div>
       </div>
     </section>

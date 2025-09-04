@@ -11,11 +11,13 @@ const BodyWorkSection = () => {
       </p>
 
       {/* Contact Button */}
-      <div className="mb-12">
-        <button className="bg-black dark:bg-gray-200 text-white dark:text-black font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-300 transition-colors">
-          <span>CONTACT US</span>
-          <FaArrowRight className="text-yellow-300" />
-        </button>
+      <div className="mt-10 mb-10">
+        <a href="/contact">
+          <button className="bg-black dark:bg-gray-200 text-white dark:text-black font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-300 transition-colors">
+            <span>CONTACT US</span>
+            <FaArrowRight className="text-yellow-300" />
+          </button>
+        </a>
       </div>
 
       {/* Scrolling Banner */}

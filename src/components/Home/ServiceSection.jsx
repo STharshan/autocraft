@@ -117,11 +117,11 @@ const ServiceSection = () => {
                 <div className="absolute inset-0 bg-black/80 group-hover:bg-black/50 dark:group-hover:bg-white/40 transition duration-300"></div>
                 <div className="absolute bottom-0 p-5 z-10">
                   <h3 className="text-lg font-bold text-yellow-400 mb-2">{service.title}</h3>
-                  <p className="text-sm text-gray-200 dark:text-gray-800 mb-4">{service.desc}</p>
+                  <p className="text-sm text-gray-200 mb-4">{service.desc}</p>
                   <Link to={service.path}>
                     <button className="mt-auto px-4 py-2 text-xs border border-yellow-400 rounded-full font-semibold cursor-pointer
                         hover:translate-x-1.5 transition-transform duration-500
-                        text-white dark:text-black bg-transparent dark:bg-transparent
+                        text-white bg-transparent dark:bg-transparent
                         hover:bg-yellow-400 hover:text-black dark:hover:bg-yellow-400 dark:hover:text-black"
                     >
                       <FaArrowRight className="inline mr-2 text-yellow-400" />

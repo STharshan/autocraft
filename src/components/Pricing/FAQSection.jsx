@@ -44,11 +44,12 @@ const FAQSection = () => {
           <p className="text-gray-600 dark:text-gray-300 text-sm mb-8 max-w-xs">
             Find answers to common questions about our services and policies.
           </p>
-
-          <button className="bg-yellow-300 dark:bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 hover:bg-lime-400 dark:hover:bg-lime-600 transition-colors">
-            <FaArrowRight className="text-sm" />
-            CONTACT US
-          </button>
+          <a href="/contact">
+            <button className="bg-yellow-300 dark:bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 hover:bg-lime-400 dark:hover:bg-lime-600 transition-colors">
+              <FaArrowRight className="text-sm" />
+              CONTACT US
+            </button>
+          </a>
         </div>
 
         {/* Right Section */}
