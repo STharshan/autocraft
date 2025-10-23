@@ -66,7 +66,7 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="mt-10 text-center text-gray-500 dark:text-gray-400 text-sm">
-        © 2024 Nikita Autocraft. All rights reserved. Partnered with{" "}
+        © 2025 Nikita Autocraft. All rights reserved. Partnered with{" "}
         <a
           href="https://www.ansely.co.uk"    // <-- change this to the correct website if different!
           target="_blank"

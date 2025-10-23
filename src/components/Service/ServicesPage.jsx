@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -47,13 +47,17 @@ const services = [
   },
   {
     title: "DENTS/SCRATCHES",
-    desc: "Restore Your Car’s Perfect Finish. Professional dent removal for a flawless vehicle surface.",
+    desc: "Restore Your Car's Perfect Finish. Professional dent removal for a flawless vehicle surface.",
     img: "/work.avif",
     path: "/services/dent-repair",
   },
 ];
 
 const ServicesPage = () => {
+  const remainder = services.length % 3;
+  const mainServices = remainder !== 0 ? services.slice(0, -remainder) : services;
+  const lastServices = remainder !== 0 ? services.slice(-remainder) : [];
+
   return (
     <div className="text-black dark:text-white bg-white dark:bg-black transition-colors">
       {/* Services Title */}
@@ -62,38 +66,75 @@ const ServicesPage = () => {
           OUR SERVICES
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mt-10 text-xl max-w-xs mx-auto">
-          From minor fixes to major repairs, we’ve got you covered.
+          From minor fixes to major repairs, we've got you covered.
         </p>
       </section>
 
       {/* Services Grid */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 px-6 pb-20 max-w-6xl mx-auto">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="relative group overflow-hidden rounded shadow-lg transition-transform duration-300 transform hover:scale-105 bg-white dark:bg-gray-900"
-          >
-            <img
-              src={service.img}
-              alt={service.title}
-              className="w-full h-60 object-cover grayscale group-hover:grayscale-0 transition duration-300"
-            />
-            {/* Card overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 dark:from-black/90 to-transparent opacity-80" />
-            <div className="absolute bottom-4 left-4 right-4 z-10">
-              <h3 className="text-blue-500 dark:text-blue-300 font-semibold text-lg mb-2">
-                {service.title}
-              </h3>
-              <p className="text-sm text-white dark:text-gray-100 mb-4">{service.desc}</p>
-              <Link to={service.path}>
-                <button className="flex items-center space-x-1 px-4 py-1 border border-lime-400 dark:border-lime-500 rounded-full text-lime-400 dark:text-lime-300 text-xs hover:bg-lime-400 hover:text-black dark:hover:bg-lime-500 dark:hover:text-black transition duration-200">
-                  <FaArrowRight size={12} />
-                  <span>EXPLORE</span>
-                </button>
-              </Link>
+      <section className="px-6 pb-20 max-w-6xl mx-auto">
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+          {mainServices.map((service, index) => (
+            <div
+              key={index}
+              className="relative group overflow-hidden rounded shadow-lg transition-transform duration-300 transform hover:scale-105 bg-white dark:bg-gray-900"
+            >
+              <img
+                src={service.img}
+                alt={service.title}
+                className="w-full h-60 object-cover grayscale group-hover:grayscale-0 transition duration-300"
+              />
+              {/* Card overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 dark:from-black/90 to-transparent opacity-80" />
+              <div className="absolute bottom-4 left-4 right-4 z-10">
+                <h3 className="text-blue-500 dark:text-blue-300 font-semibold text-lg mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-white dark:text-gray-100 mb-4">{service.desc}</p>
+                <Link to={service.path}>
+                  <button className="flex items-center space-x-1 px-4 py-1 border border-lime-400 dark:border-lime-500 rounded-full text-lime-400 dark:text-lime-300 text-xs hover:bg-lime-400 hover:text-black dark:hover:bg-lime-500 dark:hover:text-black transition duration-200">
+                    <FaArrowRight size={12} />
+                    <span>EXPLORE</span>
+                  </button>
+                </Link>
+              </div>
             </div>
+          ))}
+        </div>
+        
+        {/* Centered Last Cards */}
+        {lastServices.length > 0 && (
+          <div className="flex justify-center mt-6 gap-6">
+            {lastServices.map((service, index) => (
+              <div
+                key={`last-${index}`}
+                className="w-full sm:w-1/2 lg:w-1/3"
+              >
+                <div className="relative group overflow-hidden rounded shadow-lg transition-transform duration-300 transform hover:scale-105 bg-white dark:bg-gray-900">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-60 object-cover grayscale group-hover:grayscale-0 transition duration-300"
+                  />
+                  {/* Card overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 dark:from-black/90 to-transparent opacity-80" />
+                  <div className="absolute bottom-4 left-4 right-4 z-10">
+                    <h3 className="text-blue-500 dark:text-blue-300 font-semibold text-lg mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-white dark:text-gray-100 mb-4">{service.desc}</p>
+                    <Link to={service.path}>
+                      <button className="flex items-center space-x-1 px-4 py-1 border border-lime-400 dark:border-lime-500 rounded-full text-lime-400 dark:text-lime-300 text-xs hover:bg-lime-400 hover:text-black dark:hover:bg-lime-500 dark:hover:text-black transition duration-200">
+                        <FaArrowRight size={12} />
+                        <span>EXPLORE</span>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        )}
       </section>
     </div>
   );
