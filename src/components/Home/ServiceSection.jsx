@@ -1,6 +1,8 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const services = [
   {
@@ -43,6 +45,10 @@ const services = [
 export default function ServiceSection() {
   const scrollRef = useRef(null);
 
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
+
   const scroll = (direction) => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
@@ -55,11 +61,11 @@ export default function ServiceSection() {
   return (
     <section className="relative py-20 px-6 bg-white dark:bg-black text-[#0B0B0B] dark:text-gray-100 font-['Exo_2',sans-serif] overflow-hidden transition-colors duration-300">
       {/* Header */}
-      <div className="max-w-7xl mx-auto text-center mb-14">
+      <div data-aos="fade-down" className="max-w-7xl mx-auto text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase text-[#1B75BB] dark:text-[#4EA8FF] tracking-wide mb-3">
           Our Services
         </h2>
-        <p className="text-gray-500 dark:text-gray-300 text-lg  leading-relaxed max-w-xs mx-auto">
+        <p className="text-gray-500 dark:text-gray-300 text-lg leading-relaxed max-w-xs mx-auto">
           From minor fixes to major repairs, we’ve got you covered.
         </p>
       </div>
@@ -82,6 +88,8 @@ export default function ServiceSection() {
           {services.map((service, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150} // stagger animation
               className="relative flex-shrink-0 w-[320px] md:w-[380px] lg:w-[420px] h-[520px] rounded-md overflow-hidden shadow-lg group transition-all duration-500 border border-gray-200 dark:border-gray-700"
             >
               {/* Image */}
@@ -95,7 +103,7 @@ export default function ServiceSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent dark:via-black/80 transition duration-500"></div>
 
               {/* Content */}
-              <div className="absolute bottom-0 p-8 z-10 bg-[#212121">
+              <div className="absolute bottom-0 p-8 z-10 bg-[#212121]">
                 <h3 className="text-lg font-bold uppercase text-[#1B75BB] dark:text-[#4EA8FF] mb-2">
                   {service.title}
                 </h3>
@@ -104,7 +112,10 @@ export default function ServiceSection() {
                 </p>
 
                 {/* Button */}
-                <button className="relative cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden border border-gray-700 ">
+                <button
+                  data-aos="zoom-in"
+                  className="relative cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden border border-gray-700"
+                >
                   <span className="text-[#D9C814] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
                     /
                   </span>
@@ -116,8 +127,15 @@ export default function ServiceSection() {
             </div>
           ))}
         </div>
-      </div>
 
+        {/* Right Arrow */}
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/60 dark:bg-white/20 hover:bg-[#E4D12E] text-white dark:text-white hover:text-black p-3 rounded-full z-20 transition-all"
+        >
+          <FaChevronRight size={18} />
+        </button>
+      </div>
     </section>
   );
 }

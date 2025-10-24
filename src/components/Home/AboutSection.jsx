@@ -1,13 +1,19 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
+
   return (
     <section className="relative w-full bg-white dark:bg-black overflow-hidden font-['Exo_2',sans-serif] py-20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16 px-6 md:px-8">
         {/* ================= Left Section ================= */}
-        <div className="space-y-6">
+        <div className="space-y-6" data-aos="fade-right">
           {/* Small label */}
           <div className="flex items-center gap-2">
             <span className="w-4 h-[2px] bg-[#E4D12E] rotate-135 block"></span>
@@ -28,13 +34,13 @@ export default function AboutSection() {
 
           {/* Feature list */}
           <div className="flex flex-wrap items-center gap-8 text-[15px] text-[#222222] dark:text-gray-100">
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2" data-aos="fade-up" data-aos-delay="200">
               <span className="bg-[#E4D12E] p-1 flex items-center justify-center">
                 <FaArrowRight className="text-black w-3 h-3" />
               </span>
               Reliable Work
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2" data-aos="fade-up" data-aos-delay="400">
               <span className="bg-[#E4D12E] p-1 flex items-center justify-center">
                 <FaArrowRight className="text-black w-3 h-3" />
               </span>
@@ -43,17 +49,21 @@ export default function AboutSection() {
           </div>
 
           {/* Custom Button */}
-          <button className="relative bg-[#1A1A1A] dark:bg-gray-100 text-white dark:text-black cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden">
+          <button
+            data-aos="zoom-in"
+            data-aos-delay="600"
+            className="relative bg-[#1A1A1A] dark:bg-gray-100 text-white dark:text-black cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden"
+          >
             <span className="text-[#D9C814] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
               /
             </span>
-            <span className="tracking-wider text-sm group-hover:text-[#D9C814] transition-colors duration-300">
+            <span className="tracking-wider text-sm transition-transform  duration-300 transform group-hover:translate-x-2 group-hover:text-[#D9C814]">
               LEARN MORE
             </span>
           </button>
 
           {/* Testimonial */}
-          <div className="mt-14">
+          <div data-aos="fade-up" data-aos-delay="800" className="mt-14">
             <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
               “Fast delivery and outstanding results. Thank you!”
             </p>
@@ -64,7 +74,7 @@ export default function AboutSection() {
         </div>
 
         {/* ================= Right Image Section ================= */}
-        <div className="relative">
+        <div data-aos="fade-left" className="relative">
           {/* Main image */}
           <img
             src="/green.webp"

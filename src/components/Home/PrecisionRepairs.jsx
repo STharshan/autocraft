@@ -1,12 +1,23 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PrecisionRepairs = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
+
   return (
     <section className="w-full bg-white dark:bg-black py-12 px-4 md:px-8 transition-colors">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* LEFT COLUMN: IMAGES */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 relative w-full md:w-1/2 h-115">
+        <div
+          data-aos="fade-right"
+          className="grid grid-cols-2 grid-rows-2 gap-4 relative w-full md:w-1/2 h-115"
+        >
           {/* Top Left Image */}
           <img
             src="/graypaint.avif"
@@ -45,7 +56,10 @@ const PrecisionRepairs = () => {
         </div>
 
         {/* RIGHT COLUMN: TEXT */}
-        <div className="md:text-left md:w-1/2 mx-auto">
+        <div
+          data-aos="fade-left"
+          className="md:text-left md:w-1/2 mx-auto"
+        >
           <p className="text-sm text-center text-gray-600 dark:text-gray-400 tracking-widest mb-15">
             <span className="text-yellow-300 font-bold">/</span> NIKITA AUTOCRAFT
           </p>
@@ -69,16 +83,17 @@ const PrecisionRepairs = () => {
           </div>
 
           {/* Button */}
-          <button className="bg-black dark:bg-gray-100 gap-5  transition text-white dark:text-black px-6 py-3 rounded-full font-semibold flex items-center mx-auto group">
+          <button
+            data-aos="zoom-in"
+            className="bg-black dark:bg-gray-100 gap-5 transition text-white dark:text-black px-6 py-3 rounded-full font-semibold flex items-center mx-auto group"
+          >
             <span className="text-[#D9C814] text-xl transition-transform duration-300 group-hover:rotate-75 inline-block">
               /
             </span>
-              <span className="tracking-wider  text-sm group-hover:text-[#D9C814] transition-colors duration-300">
-                    DISCOVER MORE
-                  </span>
-            
+            <span className="tracking-wider text-sm group-hover:text-[#D9C814] transition-colors duration-300">
+              DISCOVER MORE
+            </span>
           </button>
-
         </div>
       </div>
     </section>

@@ -1,11 +1,18 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const images = ["/gray.avif", "/work.avif", "/paint.webp", "/homepaint.avif"];
 
 export default function GallerySlider() {
   const [index, setIndex] = useState(0);
   const sliderRef = useRef();
+
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
 
   // Auto slide
   useEffect(() => {
@@ -45,17 +52,26 @@ export default function GallerySlider() {
       {/* Content */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-6xl  uppercase text-[#1B75BB] tracking-wider mb-4">
+        <h2
+          data-aos="fade-down"
+          className="text-4xl md:text-6xl uppercase text-[#1B75BB] tracking-wider mb-4"
+        >
           GALLERY
         </h2>
 
         {/* Subtitle */}
-        <p className="text-[#C2C2C2] text-base md:text-lg leading-relaxed mb-8 max-w-md">
+        <p
+          data-aos="fade-up"
+          className="text-[#C2C2C2] text-base md:text-lg leading-relaxed mb-8 max-w-md"
+        >
           See our impressive work on various vehicles, before and after.
         </p>
 
-        {/* Button (matches your style exactly) */}
-        <button className="relative bg-[#1A1A1A] text-white font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition-all duration-300 group overflow-hidden">
+        {/* Button */}
+        <button
+          data-aos="zoom-in"
+          className="relative bg-[#1A1A1A] text-white font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition-all duration-300 group overflow-hidden"
+        >
           <span className="text-[#E4D12E] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
             /
           </span>
