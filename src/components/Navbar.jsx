@@ -28,15 +28,15 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 ">
-          <a href="/about" className="hover:text-yellow-600 dark:hover:text-yellow-400">ABOUT</a>
-          <a href="/gallery" className="hover:text-yellow-600 dark:hover:text-yellow-400">GALLERY</a>
-          <a href="/pricing" className="hover:text-yellow-600 dark:hover:text-yellow-400">PRICING</a>
+          <a href="/about" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1">ABOUT</a>
+          <a href="/gallery" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1">GALLERY</a>
+          <a href="/pricing" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1">PRICING</a>
 
           {/* Desktop Dropdown (click-based) */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setDesktopDropdown(!desktopDropdown)}
-              className="hover:text-yellow-600 dark:hover:text-yellow-400 flex items-center"
+              className="hover:text-yellow-600 dark:hover:text-yellow-400 flex items-center text-sm leading-tight py-1"
             >
               SERVICES AND MORE{" "}
               {desktopDropdown ? (
@@ -50,20 +50,23 @@ const Navbar = () => {
               <div className="absolute top-full mt-4 right-0 w-[400px] bg-white dark:bg-black text-black dark:text-white px-6 py-4 rounded-lg shadow-xl z-50 border border-gray-200 dark:border-gray-700">
                 <div className="flex space-x-6">
                   <div className="space-y-2 pr-20">
-                    <a href="/" className="hover:text-yellow-600 dark:hover:text-yellow-400 block">Home</a>
-                    <a href="/about" className="hover:text-yellow-600 dark:hover:text-yellow-400 block">About</a>
-                    <a href="/services" className="hover:text-yellow-600 dark:hover:text-yellow-400 block">Services</a>
-                    <a href="/gallery" className="hover:text-yellow-600 dark:hover:text-yellow-400 block">Gallery</a>
+                    <a href="/" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1 block">Home</a>
+                    <a href="/about" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1 block">About</a>
+                    <a href="/services" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1 block">Services</a>
+                    <a href="/gallery" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1 block">Gallery</a>
                   </div>
+
                   <div className="border-l border-gray-300 dark:border-gray-700"></div>
+
                   <div className="space-y-2 pl-4">
-                    <a href="/pricing" className="hover:text-yellow-600 dark:hover:text-yellow-400 block">Pricing</a>
-                    <a href="/contact" className="hover:text-yellow-600 dark:hover:text-yellow-400 block">Contact</a>
+                    <a href="/pricing" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1 block">Pricing</a>
+                    <a href="/contact" className="hover:text-yellow-600 dark:hover:text-yellow-400 text-sm leading-tight py-1 block">Contact</a>
                   </div>
                 </div>
               </div>
             )}
           </div>
+
         </div>
 
         {/* Theme toggle (desktop) */}
