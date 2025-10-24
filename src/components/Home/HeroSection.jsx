@@ -15,7 +15,7 @@ const HeroSection = () => {
             />
 
             {/* Reverse overlay: light = dark, dark = light */}
-            <div className="absolute inset-0 z-0 transition-colors"></div>
+            <div className="absolute inset-0 z-0 bg-black/80 transition-colors"></div>
 
             {/* Centered Content */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
