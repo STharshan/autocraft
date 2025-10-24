@@ -28,14 +28,22 @@ const TestimonialsSection = () => {
     <section className="w-full bg-white dark:bg-black py-12 transition-colors">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 items-center">
         {/* Left */}
-        <div>
-          <p className="text-sm font-bold text-gray-500 dark:text-gray-400 mb-2 flex items-center">
-            <span className="inline-block w-2 h-px -rotate-45 bg-yellow-400 mr-2 "></span> RAVING REVIEWS
-          </p>
-          <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 leading-tight mt-15 tracking-widest">
-            THOUSANDS OF <br /> HAPPY DRIVERS
-          </h2>
-        </div>
+        {/* Left */}
+<div>
+  {/* Small Label */}
+  <div className="flex items-center gap-2 mb-3">
+    <span className="inline-block w-3 h-[1.5px] bg-[#E4D12E] rotate-[-45deg]"></span>
+    <p className="text-[11px] uppercase tracking-[1px] text-gray-400 font-semibold">
+      RAVING REVIEWS
+    </p>
+  </div>
+
+  {/* Main Heading */}
+  <h2 className="text-3xl md:text-4xl  uppercase text-[#1B75BB] leading-snug tracking-wider">
+    THOUSANDS OF <br /> HAPPY DRIVERS
+  </h2>
+</div>
+
 
         {/* Right */}
         <div className="relative bg-black dark:bg-gray-900 overflow-hidden p-4 h-180 transition-colors">
@@ -50,7 +58,7 @@ const TestimonialsSection = () => {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="relative bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 p-4 min-w-[500px] shadow"
+                className="relative bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 p-4 min-w-[300px] shadow"
               >
                 {/* left gradient */}
                 <div className="absolute left-0 top-0 h-full w-4 bg-gradient-to-r from-black/70 dark:from-gray-900/80 to-transparent"></div>
