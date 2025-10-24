@@ -1,24 +1,21 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 
-const images = [
-  "/gray.avif",
-  "/work.avif",
-  "/paint.webp",
-  "/homepaint.avif",
-];
+const images = ["/gray.avif", "/work.avif", "/paint.webp", "/homepaint.avif"];
 
-const GallerySlider = () => {
+export default function GallerySlider() {
   const [index, setIndex] = useState(0);
   const sliderRef = useRef();
 
+  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // Change every 3 sec
-
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
+  // Slide transition
   useEffect(() => {
     if (sliderRef.current) {
       sliderRef.current.style.transform = `translateX(-${index * 100}%)`;
@@ -26,10 +23,11 @@ const GallerySlider = () => {
   }, [index]);
 
   return (
-    <section className="w-full overflow-hidden relative h-[400px] md:h-[700px]">
+    <section className="relative w-full overflow-hidden h-[420px] md:h-[680px] font-['Exo_2',sans-serif]">
+      {/* Background Images */}
       <div
         ref={sliderRef}
-        className="flex transition-transform duration-1000 ease-in-out h-full"
+        className="flex transition-transform duration-[1200ms] ease-in-out h-full"
       >
         {images.map((img, i) => (
           <img
@@ -41,25 +39,31 @@ const GallerySlider = () => {
         ))}
       </div>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/55 z-10"></div>
 
-      {/* Overlay content */}
-      <div className="absolute inset-0 flex items-center justify-center text-center px-4">
-        <div className="text-white">
-          <h2 className="text-3xl md:text-5xl font-bold text-blue-500 mb-4">
-            GALLERY
-          </h2>
-          <p className="text-md md:text-xl mb-6 text-gray-300 max-w-sm mx-auto">
-            See our impressive work on various vehicles, before and after.
-          </p>
-          <button className="bg-black text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-800 transition ml-22">
-            <span className="text-yellow-400 text-xl">/</span> EXPLORE GALLERY
-          </button>
-        </div>
+      {/* Content */}
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+        {/* Title */}
+        <h2 className="text-4xl md:text-6xl  uppercase text-[#1B75BB] tracking-wider mb-4">
+          GALLERY
+        </h2>
+
+        {/* Subtitle */}
+        <p className="text-[#C2C2C2] text-base md:text-lg leading-relaxed mb-8 max-w-md">
+          See our impressive work on various vehicles, before and after.
+        </p>
+
+        {/* Button (matches your style exactly) */}
+        <button className="relative bg-[#1A1A1A] text-white font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition-all duration-300 group overflow-hidden">
+          <span className="text-[#E4D12E] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
+            /
+          </span>
+          <span className="tracking-wider text-sm group-hover:text-[#E4D12E] transition-colors duration-300">
+            EXPLORE GALLERY
+          </span>
+        </button>
       </div>
     </section>
   );
-};
-
-export default GallerySlider;
+}
