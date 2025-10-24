@@ -20,7 +20,7 @@ const Header = () => {
       <div className="relative z-10 text-center text-white max-w-3xl mt-50">
         {/* Rating Badge */}
         <div className="mb-6 inline-flex items-center gap-3 border border-gray-700 rounded-full px-5 py-2 text-sm font-medium">
-          <div className="flex text-yellow-400 space-x-1">
+          <div className="flex text-[#D9C814] space-x-1">
             {[...Array(5)].map((_, i) => (
               <FaStar key={i} size={14} />
             ))}
@@ -30,7 +30,7 @@ const Header = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-7xl font-semibold text-blue-600 mb-10">ABOUT</h2>
+        <h2 className="text-4xl md:text-7xl font-semibold text-[#028BFA] mb-10">ABOUT</h2>
 
         {/* Subtext */}
         <p className="text-gray-300 text-base md:text-lg font-semibold">
@@ -41,11 +41,11 @@ const Header = () => {
         {/* Info Badges */}
         <div className="flex flex-wrap justify-center gap-4">
           <div className="flex items-center gap-2 font-semibold px-4 py-2 rounded-md">
-            <BsArrowRightShort size={20} className="bg-yellow-400 text-black" />
+            <BsArrowRightShort size={20} className="bg-[#D9C814] text-black" />
             Years of Expertise
           </div>
           <div className="flex items-center gap-2 font-semibold px-4 py-2 rounded-md">
-            <BsArrowRightShort size={20} className="bg-yellow-400 text-black " />
+            <BsArrowRightShort size={20} className="bg-[#D9C814] text-black " />
             Trusted by Many
           </div>
         </div>

@@ -95,7 +95,7 @@ export default function ServiceSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent dark:via-black/80 transition duration-500"></div>
 
               {/* Content */}
-              <div className="absolute bottom-0 p-8 z-10">
+              <div className="absolute bottom-0 p-8 z-10 bg-[#212121">
                 <h3 className="text-lg font-bold uppercase text-[#1B75BB] dark:text-[#4EA8FF] mb-2">
                   {service.title}
                 </h3>

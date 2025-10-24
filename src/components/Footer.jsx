@@ -33,7 +33,7 @@ const Footer = () => {
           {/* Email + Phone */}
           <div className="flex flex-col gap-2">
             {/* Email link */}
-            <div className="flex justify-between items-center border-b pb-1 group cursor-pointer hover:border-yellow-400 transition-all duration-200 dark:border-gray-800">
+            <div className="flex justify-between items-center border-b pb-1 group cursor-pointer hover:border-[#D9C814] transition-all duration-200 dark:border-gray-800">
               <a href="mailto:Gags@nikitaautocraft.co.uk" target='_blank' className="group-hover:translate-x-5.5 transition-transform duration-500">
                 Gags@nikitaautocraft.co.uk
               </a>
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
 
             {/* Phone number with WhatsApp link */}
-            <div className="flex justify-between items-center border-b pb-1 group cursor-pointer hover:border-yellow-400 transition-all duration-200 dark:border-gray-800">
+            <div className="flex justify-between items-center border-b pb-1 group cursor-pointer hover:border-[#D9C814] transition-all duration-200 dark:border-gray-800">
               <a
                 href="tel:01162512277"
                 target='_blank'
@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* Review */}
           <div className="flex flex-nowrap items-center gap-3 border-gray-300 dark:border-gray-700 border rounded-full px-6 py-2.5 w-fit self-center md:self-start whitespace-nowrap overflow-x-auto">
-            <div className="flex text-yellow-400 text-sm">
+            <div className="flex text-[#D9C814] text-sm">
               {[...Array(5)].map((_, i) => <FaStar key={i} />)}
             </div>
             <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">4.3/5 from</span>
@@ -71,7 +71,7 @@ const Footer = () => {
           href="https://www.ansely.co.uk"    // <-- change this to the correct website if different!
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black dark:text-yellow-400 font-semibold hover:underline hover:text-yellow-700 dark:hover:text-yellow-300 transition"
+          className="text-black dark:text-[#D9C814] font-semibold hover:underline hover:text-yellow-700 dark:hover:text-yellow-300 transition"
         >
           Ansely
         </a>

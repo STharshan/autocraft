@@ -20,7 +20,7 @@ const PrecisionRepairs = () => {
             className="w-full h-full object-cover grayscale"
           />
           {/* Bottom Left Yellow Box */}
-          <div className="bg-gradient-to-br from-yellow-300 to-white dark:from-yellow-400 dark:to-black relative p-6 flex flex-col justify-end">
+          <div className="bg-gradient-to-br from-yellow-300 to-white dark:from-[#D9C814] dark:to-black relative p-6 flex flex-col justify-end">
             <div className="absolute inset-0">
               <svg className="absolute top-0 left-0 w-full h-full">
                 <line
@@ -33,7 +33,7 @@ const PrecisionRepairs = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-4xl font-bold text-yellow-400 z-10">5+</h3>
+            <h3 className="text-4xl font-bold text-[#D9C814] z-10">5+</h3>
             <p className="text-xs text-gray-600 dark:text-gray-300 z-10">Expert Technicians</p>
           </div>
           {/* Bottom Right Image */}
@@ -59,19 +59,26 @@ const PrecisionRepairs = () => {
           {/* Icons + Tags */}
           <div className="flex flex-wrap items-center gap-4 mb-12 mt-10 mx-auto md:ml-20 lg:ml-35">
             <div className="flex items-center gap-2 text-sm font-semibold">
-              <FaArrowRight className="bg-yellow-400 text-black rounded-sm p-1 w-5 h-5" />
+              <FaArrowRight className="bg-[#D9C814] text-black rounded-sm p-1 w-5 h-5" />
               <span className="text-gray-800 dark:text-gray-100">Reliable Resolutions</span>
             </div>
             <div className="flex items-center gap-2 text-sm font-semibold">
-              <FaArrowRight className="bg-yellow-400 text-black rounded-sm p-1 w-5 h-5" />
+              <FaArrowRight className="bg-[#D9C814] text-black rounded-sm p-1 w-5 h-5" />
               <span className="text-gray-800 dark:text-gray-100">Long-Term Fixes</span>
             </div>
           </div>
 
           {/* Button */}
-          <button className="bg-black dark:bg-gray-100 hover:bg-gray-800 dark:hover:bg-gray-300 transition text-white dark:text-black px-6 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto">
-            <span className="text-yellow-400 text-xl">/</span> DISCOVER MORE
+          <button className="bg-black dark:bg-gray-100 gap-5  transition text-white dark:text-black px-6 py-3 rounded-full font-semibold flex items-center mx-auto group">
+            <span className="text-[#D9C814] text-xl transition-transform duration-300 group-hover:rotate-75 inline-block">
+              /
+            </span>
+              <span className="tracking-wider  text-sm group-hover:text-[#D9C814] transition-colors duration-300">
+                    DISCOVER MORE
+                  </span>
+            
           </button>
+
         </div>
       </div>
     </section>
