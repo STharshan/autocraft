@@ -4,48 +4,46 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full bg-white overflow-hidden font-['Exo_2',sans-serif] py-20">
+    <section className="relative w-full bg-white dark:bg-black overflow-hidden font-['Exo_2',sans-serif] py-20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16 px-6 md:px-8">
         {/* ================= Left Section ================= */}
         <div className="space-y-6">
           {/* Small label */}
-      <div className="flex items-center gap-2">
-  <span className="w-4 h-[2px] bg-[#E4D12E] rotate-135 block"></span>
-  <span className="text-xs uppercase tracking-[3px] text-gray-400 font-medium">
-    About
-  </span>
-</div>
-
+          <div className="flex items-center gap-2">
+            <span className="w-4 h-[2px] bg-[#E4D12E] rotate-135 block"></span>
+            <span className="text-xs uppercase tracking-[3px] text-gray-400 dark:text-gray-300 font-medium">
+              About
+            </span>
+          </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl  text-[#1B75BB] leading-tight">
+          <h2 className="text-4xl md:text-5xl text-[#1B75BB] dark:text-[#4EA8FF] leading-tight">
             FOUR DECADES <br /> IN THE GAME
           </h2>
 
           {/* Subtext */}
-          <p className="text-gray-500 text-[15px] leading-relaxed max-w-sm">
+          <p className="text-gray-600 dark:text-gray-300 text-[15px] leading-relaxed max-w-sm">
             Receive exceptional service and unparalleled skill with every repair.
           </p>
 
-         {/* Feature list */}
-<div className="flex flex-wrap items-center gap-8 text-[15px]  text-[#222222]">
-  <span className="flex items-center gap-2">
-    <span className="bg-[#E4D12E] p-1 flex items-center justify-center">
-      <FaArrowRight className="text-black w-3 h-3" />
-    </span>
-    Reliable Work
-  </span>
-  <span className="flex items-center gap-2">
-    <span className="bg-[#E4D12E] p-1 flex items-center justify-center">
-      <FaArrowRight className="text-black w-3 h-3" />
-    </span>
-    Trusted Technicians
-  </span>
-</div>
-
+          {/* Feature list */}
+          <div className="flex flex-wrap items-center gap-8 text-[15px] text-[#222222] dark:text-gray-100">
+            <span className="flex items-center gap-2">
+              <span className="bg-[#E4D12E] p-1 flex items-center justify-center">
+                <FaArrowRight className="text-black w-3 h-3" />
+              </span>
+              Reliable Work
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="bg-[#E4D12E] p-1 flex items-center justify-center">
+                <FaArrowRight className="text-black w-3 h-3" />
+              </span>
+              Trusted Technicians
+            </span>
+          </div>
 
           {/* Custom Button */}
-          <button className="relative bg-[#1a1a1a] text-white cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden">
+          <button className="relative bg-[#1A1A1A] dark:bg-gray-100 text-white dark:text-black cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden hover:bg-[#333] dark:hover:bg-gray-300">
             <span className="text-yellow-400 font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
               /
             </span>
@@ -56,20 +54,22 @@ export default function AboutSection() {
 
           {/* Testimonial */}
           <div className="mt-14">
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
               “Fast delivery and outstanding results. Thank you!”
             </p>
-            <p className="text-sm mt-3 font-medium text-gray-900">Sim B</p>
+            <p className="text-sm mt-3 font-medium text-gray-900 dark:text-white">
+              Sim B
+            </p>
           </div>
         </div>
 
         {/* ================= Right Image Section ================= */}
         <div className="relative">
-          {/* Main image (your image) */}
+          {/* Main image */}
           <img
             src="/green.webp"
             alt="Car spray work"
-            className="w-full rounded-sm object-cover grayscale"
+            className="w-full rounded-sm object-cover grayscale dark:opacity-90 transition-opacity duration-300"
           />
 
           {/* Yellow diagonal line */}
@@ -98,7 +98,7 @@ export default function AboutSection() {
           <img
             src="/carmechanic.avif"
             alt="Mechanic detail"
-            className="absolute bottom-8 -left-10 w-36 md:w-40 border border-gray-300 shadow-md z-20"
+            className="absolute bottom-8 -left-10 w-36 md:w-40 border border-gray-300 dark:border-gray-700 shadow-md z-20"
           />
         </div>
       </div>

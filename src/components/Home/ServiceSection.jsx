@@ -53,13 +53,13 @@ export default function ServiceSection() {
   };
 
   return (
-    <section className="relative py-20 px-6 bg-white text-[#0B0B0B] font-['Exo_2',sans-serif] overflow-hidden">
+    <section className="relative py-20 px-6 bg-white dark:bg-black text-[#0B0B0B] dark:text-gray-100 font-['Exo_2',sans-serif] overflow-hidden transition-colors duration-300">
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-extrabold uppercase text-[#1B75BB] tracking-wide mb-3">
+        <h2 className="text-3xl md:text-4xl font-extrabold uppercase text-[#1B75BB] dark:text-[#4EA8FF] tracking-wide mb-3">
           Our Services
         </h2>
-        <p className="text-gray-500 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+        <p className="text-gray-500 dark:text-gray-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
           From minor fixes to major repairs, we’ve got you covered.
         </p>
       </div>
@@ -69,7 +69,7 @@ export default function ServiceSection() {
         {/* Left Arrow */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-[#E4D12E] text-white hover:text-black p-3 rounded-full z-20 transition"
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/60 dark:bg-white/20 hover:bg-[#E4D12E] text-white dark:text-white hover:text-black p-3 rounded-full z-20 transition-all"
         >
           <FaChevronLeft size={18} />
         </button>
@@ -82,7 +82,7 @@ export default function ServiceSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-[320px] md:w-[380px] lg:w-[420px] h-[520px] rounded-md overflow-hidden shadow-lg group transition-all duration-500"
+              className="relative flex-shrink-0 w-[320px] md:w-[380px] lg:w-[420px] h-[520px] rounded-md overflow-hidden shadow-lg group transition-all duration-500 border border-gray-200 dark:border-gray-700"
             >
               {/* Image */}
               <img
@@ -92,19 +92,19 @@ export default function ServiceSection() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent transition duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent dark:via-black/80 transition duration-500"></div>
 
               {/* Content */}
               <div className="absolute bottom-0 p-8 z-10">
-                <h3 className="text-lg font-bold uppercase text-[#1B75BB] mb-2">
+                <h3 className="text-lg font-bold uppercase text-[#1B75BB] dark:text-[#4EA8FF] mb-2">
                   {service.title}
                 </h3>
-                <p className="text-sm text-gray-300 mb-6 leading-relaxed">
+                <p className="text-sm text-gray-300 dark:text-gray-200 mb-6 leading-relaxed">
                   {service.desc}
                 </p>
 
                 {/* Button */}
-                <button className="relative bg-[#1a1a1a] text-white cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden border border-[#E4D12E]">
+                <button className="relative bg-[#1a1a1a] dark:bg-gray-100 text-white dark:text-black cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden border border-[#E4D12E] hover:bg-[#333] dark:hover:bg-gray-300">
                   <span className="text-yellow-400 font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
                     /
                   </span>
@@ -121,7 +121,7 @@ export default function ServiceSection() {
         {/* Right Arrow */}
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-[#E4D12E] text-white hover:text-black p-3 rounded-full z-20 transition"
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/60 dark:bg-white/20 hover:bg-[#E4D12E] text-white dark:text-white hover:text-black p-3 rounded-full z-20 transition-all"
         >
           <FaChevronRight size={18} />
         </button>
@@ -129,10 +129,12 @@ export default function ServiceSection() {
 
       {/* Testimonial */}
       <div className="text-center mt-16">
-        <p className="italic text-gray-500 max-w-lg mx-auto leading-relaxed">
+        <p className="italic text-gray-500 dark:text-gray-300 max-w-lg mx-auto leading-relaxed">
           “Fast delivery and outstanding results. Thank you!”
         </p>
-        <p className="mt-2 text-sm font-medium text-[#0B0B0B]">Sim B</p>
+        <p className="mt-2 text-sm font-medium text-[#0B0B0B] dark:text-gray-100">
+          Sim B
+        </p>
       </div>
     </section>
   );
