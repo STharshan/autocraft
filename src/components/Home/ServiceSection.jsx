@@ -59,7 +59,7 @@ export default function ServiceSection() {
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase text-[#1B75BB] dark:text-[#4EA8FF] tracking-wide mb-3">
           Our Services
         </h2>
-        <p className="text-gray-500 dark:text-gray-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+        <p className="text-gray-500 dark:text-gray-300 text-lg  leading-relaxed max-w-xs mx-auto">
           From minor fixes to major repairs, we’ve got you covered.
         </p>
       </div>
@@ -104,38 +104,20 @@ export default function ServiceSection() {
                 </p>
 
                 {/* Button */}
-                <button className="relative bg-[#1a1a1a] dark:bg-gray-100 text-white dark:text-black cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden border border-[#E4D12E] hover:bg-[#333] dark:hover:bg-gray-300">
-                  <span className="text-yellow-400 font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
+                <button className="relative cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden border border-gray-700 ">
+                  <span className="text-[#D9C814] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
                     /
                   </span>
-                  <span className="tracking-wider text-sm group-hover:text-yellow-400 transition-colors duration-300">
+                  <span className="tracking-wider text-[#D9C814] text-sm group-hover:text-[#D9C814] transition-colors duration-300">
                     EXPLORE
                   </span>
-                  <FaArrowRight className="text-yellow-400 text-xs transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Right Arrow */}
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/60 dark:bg-white/20 hover:bg-[#E4D12E] text-white dark:text-white hover:text-black p-3 rounded-full z-20 transition-all"
-        >
-          <FaChevronRight size={18} />
-        </button>
       </div>
 
-      {/* Testimonial */}
-      <div className="text-center mt-16">
-        <p className="italic text-gray-500 dark:text-gray-300 max-w-lg mx-auto leading-relaxed">
-          “Fast delivery and outstanding results. Thank you!”
-        </p>
-        <p className="mt-2 text-sm font-medium text-[#0B0B0B] dark:text-gray-100">
-          Sim B
-        </p>
-      </div>
     </section>
   );
 }

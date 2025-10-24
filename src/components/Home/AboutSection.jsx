@@ -43,11 +43,11 @@ export default function AboutSection() {
           </div>
 
           {/* Custom Button */}
-          <button className="relative bg-[#1A1A1A] dark:bg-gray-100 text-white dark:text-black cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden hover:bg-[#333] dark:hover:bg-gray-300">
-            <span className="text-yellow-400 font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
+          <button className="relative bg-[#1A1A1A] dark:bg-gray-100 text-white dark:text-black cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden">
+            <span className="text-[#D9C814] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
               /
             </span>
-            <span className="tracking-wider text-sm group-hover:text-yellow-400 transition-colors duration-300">
+            <span className="tracking-wider text-sm group-hover:text-[#D9C814] transition-colors duration-300">
               LEARN MORE
             </span>
           </button>
@@ -91,14 +91,14 @@ export default function AboutSection() {
           </div>
 
           {/* Yellow borders */}
-          <div className="absolute right-0 bottom-0 w-[6px] h-[80%] bg-gradient-to-b from-[#E4D12E] to-transparent"></div>
-          <div className="absolute right-0 bottom-0 h-[6px] w-[80%] bg-[#E4D12E]"></div>
+          <div className="absolute right-0 bottom-0 w-[14px] h-[80%] bg-gradient-to-b from-[#E4D12E] to-transparent"></div>
+          <div className="absolute right-0 bottom-0 h-[15px] w-[80%] bg-[#E4D12E]"></div>
 
           {/* Inset small mechanic image */}
           <img
             src="/carmechanic.avif"
             alt="Mechanic detail"
-            className="absolute bottom-8 -left-10 w-36 md:w-40 border border-gray-300 dark:border-gray-700 shadow-md z-20"
+            className="absolute bottom-8 -left-10 w-30 h-30 border border-gray-300 dark:border-gray-700 shadow-md z-20"
           />
         </div>
       </div>

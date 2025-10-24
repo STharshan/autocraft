@@ -48,10 +48,10 @@ const TestimonialsSection = () => {
         {/* Right */}
         <div className="relative bg-black dark:bg-gray-900 overflow-hidden p-4 h-180 transition-colors">
           {/* right vertical gradient */}
-          <div className="absolute top-0 right-0 h-full w-[15px] bg-gradient-to-b from-transparent to-yellow-400 dark:to-yellow-500"></div>
+          <div className="absolute top-0 right-0 h-full w-[15px] bg-gradient-to-b from-transparent to-[#D9C814] dark:to-yellow-500"></div>
           
           {/* diagonal yellow line */}
-          <div className="absolute border border-yellow-400 dark:border-yellow-500 transform rotate-315 w-full h-0 top-1/2 left-0"></div>
+          <div className="absolute border border-[#D9C814] dark:border-yellow-500 transform rotate-315 w-full h-0 top-1/2 left-0"></div>
           
           {/* testimonials */}
           <div className="flex space-x-4 scrollbar-hide relative z-10 mt-70 slider-track">
@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
           </div>
 
           {/* yellow bottom border */}
-          <div className="absolute bottom-0 left-0 w-full h-2 bg-yellow-400 dark:bg-yellow-500"></div>
+          <div className="absolute bottom-0 left-30 w-[80%] h-5 bg-[#D9C814] dark:bg-yellow-500"></div>
         </div>
       </div>
     </section>

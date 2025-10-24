@@ -5,11 +5,11 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen overflow-hidden font-sans text-white">
+    <section className="relative w-full h-[140vh] overflow-hidden font-sans text-white">
       {/* 🎥 Video Background */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        src="/video.mp4"
+        src="/video.MOV"
         autoPlay
         muted
         loop
@@ -29,16 +29,16 @@ export default function HeroSection() {
         />
 
         {/* Tagline */}
-        <p className="text-sm md:text-base font-light uppercase mb-6 tracking-widest">
+        <p className="text-lg font-light uppercase mb-6 tracking-widest">
           Your One-Stop Auto Repair Shop
         </p>
 
         {/* CTA Button */}
         <button className="relative bg-[#1a1a1a] text-white cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden">
-          <span className="text-yellow-400 font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
+          <span className="text-[#D9C814] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-65 inline-block">
             /
           </span>
-          <span className="tracking-wider text-sm group-hover:text-yellow-400 transition-colors duration-300">
+          <span className="tracking-wider text-sm group-hover:text-[#D9C814] transition-colors duration-300">
             GET A QUOTE
           </span>
         </button>
@@ -47,7 +47,7 @@ export default function HeroSection() {
         <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm md:text-base font-semibold">
           {["Fast Service", "Quality Care"].map((label) => (
             <div key={label} className="flex items-center gap-2">
-              <span className="bg-yellow-400 w-6 h-6 flex items-center justify-center rounded-sm">
+              <span className="bg-[#D9C814] w-6 h-6 flex items-center justify-center rounded-sm">
                 <FaArrowRight className="text-black text-xs" />
               </span>
               <span>{label}</span>
@@ -77,7 +77,7 @@ export default function HeroSection() {
           {/* Rating Section */}
           <div className="flex items-center gap-3 border border-white/20 rounded-full px-5 py-2">
             {/* Stars */}
-            <div className="flex text-yellow-400 text-sm space-x-0.5">
+            <div className="flex text-[#D9C814] text-sm space-x-0.5">
               {[...Array(5)].map((_, i) => (
                 <span key={i}>★</span>
               ))}
@@ -89,7 +89,7 @@ export default function HeroSection() {
             </span>
 
             {/* Reviews Badge */}
-            <span className="bg-white text-black text-xs px-3 py-1 rounded-full font-semibold whitespace-nowrap">
+            <span className="text-white text-xs px-3 py-1 rounded-full font-semibold whitespace-nowrap">
               20+ Reviews
             </span>
           </div>
