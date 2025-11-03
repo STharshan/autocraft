@@ -85,7 +85,7 @@ const ServicesPage = () => {
                 className="w-full h-60 object-cover grayscale group-hover:grayscale-0 transition duration-300"
               />
               {/* Card overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 dark:from-black/90 to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 dark:from-black/90 to-transparent opacity-80" />
               <div className="absolute bottom-4 left-4 right-4 z-10">
                 <h3 className="text-blue-500 dark:text-blue-300 font-semibold text-lg mb-2">
                   {service.title}
@@ -117,7 +117,7 @@ const ServicesPage = () => {
                     className="w-full h-60 object-cover grayscale group-hover:grayscale-0 transition duration-300"
                   />
                   {/* Card overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 dark:from-black/90 to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/90 dark:from-black/90 to-transparent opacity-80" />
                   <div className="absolute bottom-4 left-4 right-4 z-10">
                     <h3 className="text-blue-500 dark:text-blue-300 font-semibold text-lg mb-2">
                       {service.title}

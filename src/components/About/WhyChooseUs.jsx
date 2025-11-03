@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
             <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-blue-400 dark:border-blue-600"></div>
 
             {/* Icon */}
-            <div className="inline-block bg-gradient-to-b from-yellow-100 to-yellow-300 dark:from-yellow-900 dark:to-yellow-700 p-3 rounded mb-6">
+            <div className="inline-block bg-linear-to-b from-yellow-100 to-yellow-300 dark:from-yellow-900 dark:to-yellow-700 p-3 rounded mb-6">
               {feature.icon}
             </div>
 

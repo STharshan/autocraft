@@ -76,7 +76,7 @@ export default function HeroSection() {
       </div>
 
       {/* 📊 Bottom Stats Bar */}
-      <div className="absolute bottom-0 w-full z-30 border-t border-white/10 py-5 px-4 md:px-8 bg-gradient-to-t from-black/50 to-transparent">
+      <div className="absolute bottom-0 w-full z-30 border-t border-white/10 py-5 px-4 md:px-8 bg-linear-to-t from-black/50 to-transparent">
         <div className="max-w-6xl mx-auto flex justify-center items-center gap-8 text-white text-sm md:text-base">
           {/* Leicester Team */}
           <div

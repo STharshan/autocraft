@@ -31,7 +31,7 @@ const PrecisionRepairs = () => {
             className="w-full h-full object-cover grayscale"
           />
           {/* Bottom Left Yellow Box */}
-          <div className="bg-gradient-to-br from-yellow-300 to-white dark:from-[#D9C814] dark:to-black relative p-6 flex flex-col justify-end">
+          <div className="bg-linear-to-br from-yellow-300 to-white dark:from-[#D9C814] dark:to-black relative p-6 flex flex-col justify-end">
             <div className="absolute inset-0">
               <svg className="absolute top-0 left-0 w-full h-full">
                 <line

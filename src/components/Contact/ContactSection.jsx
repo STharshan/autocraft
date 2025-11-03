@@ -16,7 +16,7 @@ const ContactSection = () => {
         <div className="absolute bottom-0 left-0 w-0.5 h-12 bg-blue-500"></div>
 
         <div className="flex justify-center mb-4">
-          <div className="w-16 h-16 rounded bg-gradient-to-b to-yellow-300 from-white dark:from-[#21242a] flex items-center justify-center">
+          <div className="w-16 h-16 rounded bg-linear-to-b to-yellow-300 from-white dark:from-[#21242a] flex items-center justify-center">
             <span className="text-black dark:text-yellow-300 text-2xl"><BiLocationPlus /></span>
           </div>
         </div>

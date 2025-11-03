@@ -49,9 +49,9 @@ const ExpertCrewSection = () => {
       {/* Center Info Card */}
       <div className="absolute inset-0 flex items-center justify-center z-10 mt-20 px-4">
         <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 shadow-lg p-6 sm:p-8 text-center transition-colors">
-          <div className="absolute top-0 right-0 h-full w-[15px] bg-gradient-to-b from-transparent to-yellow-400 dark:to-yellow-500"></div>
+          <div className="absolute top-0 right-0 h-full w-[15px] bg-linear-to-b from-transparent to-yellow-400 dark:to-yellow-500"></div>
           {/* Bottom fixed half-border */}
-          <div className="absolute bottom-0 left-0 w-full h-[15px] bg-gradient-to-r from-transparent to-yellow-400 dark:to-yellow-500"></div>
+          <div className="absolute bottom-0 left-0 w-full h-[15px] bg-linear-to-r from-transparent to-yellow-400 dark:to-yellow-500"></div>
           <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-800 dark:text-gray-100">EXPERT CREW</h3>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300">
             Meet the professionals behind our

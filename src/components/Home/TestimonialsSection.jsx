@@ -52,8 +52,8 @@ const TestimonialsSection = () => {
 
         {/* Right */}
         <div className="relative bg-black dark:bg-gray-900 overflow-hidden p-4 h-180 transition-colors">
-          {/* Right vertical gradient */}
-          <div className="absolute top-0 right-0 h-full w-[15px] bg-gradient-to-b from-transparent to-[#D9C814] dark:to-yellow-500"></div>
+          {/* Right vertical linear */}
+          <div className="absolute top-0 right-0 h-full w-[15px] bg-linear-to-b from-transparent to-[#D9C814] dark:to-yellow-500"></div>
 
           {/* Diagonal yellow line */}
           <div className="absolute border border-[#D9C814] dark:border-yellow-500 transform rotate-315 w-full h-0 top-1/2 left-0"></div>
@@ -67,10 +67,10 @@ const TestimonialsSection = () => {
                 data-aos-delay={i * 150} // staggered animation
                 className="relative bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 p-4 min-w-[300px] shadow"
               >
-                {/* Left gradient */}
-                <div className="absolute left-0 top-0 h-full w-4 bg-gradient-to-r from-black/70 dark:from-gray-900/80 to-transparent"></div>
-                {/* Right gradient */}
-                <div className="absolute right-0 top-0 h-full w-4 bg-gradient-to-l from-black/70 dark:from-gray-900/80 to-transparent"></div>
+                {/* Left linear */}
+                <div className="absolute left-0 top-0 h-full w-4 bg-linear-to-r from-black/70 dark:from-gray-900/80 to-transparent"></div>
+                {/* Right linear */}
+                <div className="absolute right-0 top-0 h-full w-4 bg-linear-to-l from-black/70 dark:from-gray-900/80 to-transparent"></div>
 
                 <p className="text-sm mb-2">"{t.quote}"</p>
                 <p className="text-xs font-bold uppercase text-gray-600 dark:text-gray-400">
