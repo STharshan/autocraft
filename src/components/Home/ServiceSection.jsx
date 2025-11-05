@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -9,41 +10,49 @@ const services = [
     title: "DENTS/SCRATCHES",
     desc: "Restore your car’s perfect finish. Professional dent removal for a flawless vehicle surface.",
     image: "/bule.avif",
+    link: "/services/dent-repair",
   },
   {
     title: "SMART REPAIR",
     desc: "Cost-effective solution for fixing minor damage. Without the need for extensive replacement or repainting.",
     image: "/carpaint.avif",
+    link: "/services/body-smart-repairs",
   },
   {
     title: "DIAGNOSTICS",
     desc: "Consultive diagnostics – address the root cause of the issue for a lasting solution.",
     image: "/gray.avif",
+    link: "/services/diagnostics",
   },
   {
     title: "SERVICE",
     desc: "Dependable and thorough car servicing – we do more than just routine maintenance.",
     image: "/graypaint.avif",
+    link: "/services/service",
   },
   {
     title: "MECHANICAL",
     desc: "Ensuring your vehicle is in optimal condition. No job is too big for us.",
     image: "/graypaint.avif",
+    link: "/services/mechanical-repairs",
   },
   {
     title: "AC SERVICE",
     desc: "Keep you comfortable all year round. We pride ourselves on our expertise, attention to detail, and commitment to quality.",
     image: "/graypaint.avif",
+    link: "/services/ac-service",
   },
   {
     title: "MOT",
     desc: "We make your MOT test simple and stress-free.",
     image: "/graypaint.avif",
+    link: "/services/mot",
   },
 ];
 
 export default function ServiceSection() {
   const scrollRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
@@ -89,7 +98,7 @@ export default function ServiceSection() {
             <div
               key={index}
               data-aos="fade-up"
-              data-aos-delay={index * 150} // stagger animation
+              data-aos-delay={index * 150}
               className="relative flex-shrink-0 w-[320px] md:w-[380px] lg:w-[420px] h-[520px] rounded-md overflow-hidden shadow-lg group transition-all duration-500 border border-gray-200 dark:border-gray-700"
             >
               {/* Image */}
@@ -100,10 +109,10 @@ export default function ServiceSection() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent dark:via-black/80 transition duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent dark:via-black/80 transition duration-500"></div>
 
               {/* Content */}
-              <div className="absolute bottom-0 p-8 z-10 bg-[#212121]">
+              <div className="absolute bottom-0 p-8 z-10 bg-[#212121]/90 backdrop-blur-sm">
                 <h3 className="text-lg font-bold uppercase text-[#1B75BB] dark:text-[#4EA8FF] mb-2">
                   {service.title}
                 </h3>
@@ -111,8 +120,9 @@ export default function ServiceSection() {
                   {service.desc}
                 </p>
 
-                {/* Button */}
+                {/* ✅ Explore Button with navigation */}
                 <button
+                  onClick={() => navigate(service.link)}
                   data-aos="zoom-in"
                   className="relative cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden border border-gray-700"
                 >
