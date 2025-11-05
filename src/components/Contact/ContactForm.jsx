@@ -1,8 +1,51 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const ContactForm = () => {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    let tempErrors = {};
+    if (!form.firstName.trim()) tempErrors.firstName = "First name is required";
+    if (!form.lastName.trim()) tempErrors.lastName = "Last name is required";
+    if (!form.email.trim()) tempErrors.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(form.email)) tempErrors.email = "Invalid email";
+    if (!form.service.trim() || form.service === "Select...")
+      tempErrors.service = "Please select a service";
+    if (!form.message.trim()) tempErrors.message = "Message is required";
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    const phone = "447930105858"; // WhatsApp format (+44 for UK)
+    const message = `
+Name: ${form.firstName} ${form.lastName}
+Email: ${form.email}
+Service Interested: ${form.service}
+Message: ${form.message}`;
+
+    const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
-    <section className=" bg-gray-50 dark:bg-black ">
+    <section className="bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto rounded-xl shadow-md px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* LEFT SIDE: TEXT */}
         <div className="flex flex-col justify-center">
@@ -10,66 +53,130 @@ const ContactForm = () => {
             GET IN TOUCH
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-sm">
-            Reach out to us for any inquiries or to schedule an
+            Reach out to us for any inquiries or to schedule an appointment today.
           </p>
-          <p className="text-gray-600 dark:text-gray-300 text-sm">appointment today.</p>
         </div>
 
         {/* RIGHT SIDE: FORM */}
-        <form className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* First Name */}
             <div>
-              <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">First Name</label>
+              <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">
+                First Name
+              </label>
               <input
+                name="firstName"
+                value={form.firstName}
+                onChange={handleChange}
                 type="text"
-                className="w-full border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400"
+                className={`w-full border ${errors.firstName
+                    ? "border-red-500"
+                    : "border-gray-200 dark:border-gray-700"
+                  } bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400`}
                 placeholder="First Name"
               />
+              {errors.firstName && (
+                <p className="text-xs text-red-500 mt-1">{errors.firstName}</p>
+              )}
             </div>
+
+            {/* Last Name */}
             <div>
-              <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">Last Name</label>
+              <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">
+                Last Name
+              </label>
               <input
+                name="lastName"
+                value={form.lastName}
+                onChange={handleChange}
                 type="text"
-                className="w-full border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400"
+                className={`w-full border ${errors.lastName
+                    ? "border-red-500"
+                    : "border-gray-200 dark:border-gray-700"
+                  } bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400`}
                 placeholder="Last Name"
               />
+              {errors.lastName && (
+                <p className="text-xs text-red-500 mt-1">{errors.lastName}</p>
+              )}
             </div>
           </div>
 
+          {/* Email */}
           <div>
-            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">Email</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">
+              Email
+            </label>
             <input
+              name="email"
+              value={form.email}
+              onChange={handleChange}
               type="email"
-              className="w-full border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400"
+              className={`w-full border ${errors.email
+                  ? "border-red-500"
+                  : "border-gray-200 dark:border-gray-700"
+                } bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400`}
               placeholder="Email"
             />
+            {errors.email && (
+              <p className="text-xs text-red-500 mt-1">{errors.email}</p>
+            )}
           </div>
 
+          {/* Service */}
           <div>
             <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">
               Services Interested In
             </label>
-            <select className="w-full border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-gray-500 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400">
+            <select
+              name="service"
+              value={form.service}
+              onChange={handleChange}
+              className={`w-full border ${errors.service
+                  ? "border-red-500"
+                  : "border-gray-200 dark:border-gray-700"
+                } bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-gray-500 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400`}
+            >
               <option>Select...</option>
               <option>Paint Services</option>
-              <option>Mechanical</option>
+              <option>AC Services</option>
+              <option>MOT</option>
+              <option>Mechanical Repairs</option>
+              <option>Smart Repairs</option>
               <option>Diagnostics</option>
-              <option>Other</option>
+              <option>Dent Repair</option>
             </select>
+            {errors.service && (
+              <p className="text-xs text-red-500 mt-1">{errors.service}</p>
+            )}
           </div>
 
+          {/* Message */}
           <div>
-            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">Message*</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">
+              Message*
+            </label>
             <textarea
-              className="w-full border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              className={`w-full border ${errors.message
+                  ? "border-red-500"
+                  : "border-gray-200 dark:border-gray-700"
+                } bg-gray-100 dark:bg-[#23262e] rounded px-3 py-2 text-sm text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400`}
               rows="4"
               placeholder="What do you need help with?"
             ></textarea>
+            {errors.message && (
+              <p className="text-xs text-red-500 mt-1">{errors.message}</p>
+            )}
           </div>
 
+          {/* Submit Button */}
           <button
             type="submit"
-            className="w-full dark:bg-yellow-300 bg-blue-500 rounded-full py-2 text-sm font-bold text-black dark:text-white dark:hover:bg-blue-400 hover:bg-yellow-300 transition"
+            className="w-full bg-blue-500 dark:bg-yellow-300 rounded-full py-2 text-sm font-bold text-white dark:text-black hover:bg-yellow-300 dark:hover:bg-blue-400 transition"
           >
             SUBMIT
           </button>

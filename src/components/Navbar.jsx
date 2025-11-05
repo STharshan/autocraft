@@ -38,6 +38,7 @@ const Navbar = () => {
           <a href="/about" className="hover:text-[#D9C814] dark:hover:text-[#D9C814] text-sm leading-tight py-1">ABOUT</a>
           <a href="/gallery" className="hover:text-[#D9C814] dark:hover:text-[#D9C814] text-sm leading-tight py-1">GALLERY</a>
           <a href="/pricing" className="hover:text-[#D9C814] dark:hover:text-[#D9C814] text-sm leading-tight py-1">PRICING</a>
+           <a href="/contact" className="hover:text-[#D9C814] dark:hover:text-[#D9C814] text-sm leading-tight py-1">CONTACT</a>
 
           {/* Desktop Dropdown (click-based) */}
           <div className="relative" ref={dropdownRef}>
@@ -137,6 +138,7 @@ const Navbar = () => {
           <a href="/about" className="block border-b border-gray-300 dark:border-gray-700 pb-2 hover:text-yellow-500">ABOUT</a>
           <a href="/gallery" className="block border-b border-gray-300 dark:border-gray-700 pb-2 hover:text-yellow-500">GALLERY</a>
           <a href="/pricing" className="block border-b border-gray-300 dark:border-gray-700 pb-2 hover:text-yellow-500">PRICING</a>
+           <a href="/contact" className="block border-b border-gray-300 dark:border-gray-700 pb-2 hover:text-yellow-500">CONTACT</a>
 
           {/* Mobile Dropdown */}
           <div className="border-b border-gray-300 dark:border-gray-700 pb-3">

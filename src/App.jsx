@@ -16,6 +16,9 @@ import BodyService from './pages/ExtraServices/BodyService';
 import Diagnostics from './pages/ExtraServices/Diagnostics';
 import Dents from './pages/ExtraServices/Dents';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import TermsConditions from './components/Term.jsx';
+import PrivacyPolicy from './components/PrivacyPolicy.jsx';
+import GDPRConsent from './components/GDPRButton.jsx';
 
 function App() {
   return (
@@ -37,8 +40,11 @@ function App() {
         <Route path="/services/service" element={<BodyService />} />
         <Route path="/services/diagnostics" element={<Diagnostics />} />
         <Route path="/services/dent-repair" element={<Dents />} />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
+      <GDPRConsent />
     </Router>
   );
 }

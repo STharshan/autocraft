@@ -1,5 +1,6 @@
 import React from "react";
 import { FaInstagram, FaArrowRight, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -101,23 +102,42 @@ const Footer = () => {
       </div>
 
       {/* ===== Divider Line ===== */}
-      <div className="border-t border-gray-800 mt-14 mb-6"></div>
+       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Nikita Autocraft. All rights reserved.</p>
+        </div>
 
-      {/* ===== Bottom Text ===== */}
-      <div className="text-center text-xs sm:text-sm text-gray-500">
-        © 2025{" "}
-        <span className="text-gray-100 font-semibold">Nikita Autocraft</span>. All Rights
-        Reserved. <br className="sm:hidden" />
-        Partnered with{" "}
-        <a
-          href="https://www.ansely.co.uk"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#D9C814] hover:text-yellow-400 font-medium transition-all"
-        >
-          Ansely
-        </a>
-      </div>
+        {/* Bottom Bar */}
+        <div className="mt-2 flex flex-col sm:flex-row justify-center items-center gap-3 text-center font-semibold text-gray-400">
+          {/* Left: Terms & Privacy */}
+          <div className="flex gap-4 text-sm">
+            <Link
+              to="/terms"
+              className="text-gray-400 hover:text-[#D9C814] transition duration-300"
+            >
+              Terms & Conditions
+            </Link>
+            <span className="text-gray-500">|</span>
+            <Link
+              to="/privacy"
+              className="text-gray-400 hover:text-[#D9C814] transition duration-300"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+
+          {/* Center: Powered by Ansely (unchanged) */}
+          <p className="text-center font-semibold text-gray-400">
+            Powered by{" "}
+            <a
+              href="https://www.ansely.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D9C814] hover:underline"
+            >
+              Ansely
+            </a>
+          </p>
+        </div>
     </footer>
   );
 };
