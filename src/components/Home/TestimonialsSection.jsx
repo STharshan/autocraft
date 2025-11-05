@@ -5,26 +5,57 @@ import "aos/dist/aos.css";
 
 const testimonials = [
   {
+    author: "Sarge Baghra",
     quote:
-      "Got a starlight headliner done from them and it was done quickly and to a high standard. Would highly recommend",
-    author: "EEVAN S",
+      "Great customer service and excellent technical ability. Solved issues I had that main dealers could not resolve. Would highly recommend as they ensure all issues are addressed and discuss any additional work first. I’ve also had body work repairs — finish to an extremely high standard. Personally won’t be going anywhere else for all my car needs."
   },
   {
+    author: "Dhami Amarjit",
     quote:
-      "Toni and his team are lovely. Very friendly and worked well within the timeframe agreed and were very cost-effective. Absolutely recommend this team 👍.",
-    author: "RENOL K",
+      "I’ve been utilising the services of Gags for years and his service, speed, efficiency, and knowledge are top tier. He’s passionate about his work, and my cars always run perfectly. Also had body work done and the results were phenomenal. Great all-around car care — highly recommended. 10/10."
   },
   {
+    author: "Sara Roshan Sabur",
     quote:
-      "Exceptional service! My car looks as good as new. Highly recommend!",
-    author: "KIRK S",
+      "Excellent service all the way. Quick quote for a dent, job completed to an excellent standard within a day, and the car returned spotless. Great customer service — cannot recommend enough!"
   },
   {
+    author: "Yousaf Nasim",
     quote:
-      "Fantastic service. Had my Range Rover serviced by these guys, quick turn around good pricing. Will definitely be a repeat customer",
-    author: "TARVINDER B",
+      "Great guys who helped me with my Mercedes. Feels like a new car now! Would definitely recommend — very competitive prices too."
+  },
+  {
+    author: "Jay Tosar",
+    quote:
+      "Had a few issues with my BMW and took it to Nikita Autocraft — handled professionally with quick turnaround from drop-off to completion. Highly recommend!"
+  },
+  {
+    author: "Kunal Vegad",
+    quote:
+      "Brilliant customer service from the team. Added bonus that they do bodywork too! Everything you need in one place — professional, efficient, and trustworthy. Highly recommended!"
+  },
+  {
+    author: "Nick Johnston",
+    quote:
+      "Nothing is too much trouble. The team is happy to help with all vehicle-related issues. Very fair, honest pricing and quality workmanship with swift service. Highly recommend."
+  },
+  {
+    author: "Max Sieczko",
+    quote:
+      "Really good customer service and communication — very friendly too. Service was quick, and I got my car back much sooner than expected."
+  },
+  {
+    author: "Tarvinder Basra",
+    quote:
+      "Fantastic service. Had my Range Rover serviced here — quick turnaround and good pricing. Will definitely be a repeat customer."
+  },
+  {
+    author: "Neil",
+    quote:
+      "Very professional, excellent communication, and friendly, knowledgeable staff. Definitely recommend for all your vehicle needs."
   },
 ];
+
 
 const TestimonialsSection = () => {
   useEffect(() => {

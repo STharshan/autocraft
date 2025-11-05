@@ -1,77 +1,119 @@
-import React from 'react';
-import { FaInstagram, FaArrowRight } from 'react-icons/fa';
-import { FaStar } from 'react-icons/fa';
+import React from "react";
+import { FaInstagram, FaArrowRight, FaStar } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-black border-t dark:border-gray-800 text-gray-700 dark:text-gray-300 text-sm py-10 px-4 sm:px-8 transition-colors">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-10">
-        {/* Left - Address */}
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-black dark:text-gray-200 mb-15">Find Us</h3>
-          <p>107 frisby road</p>
-          <p>Leicester</p>
-          <p>le5</p>
-          <a href="https://www.instagram.com/knucklebuster_nikita/channel/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className="text-xl mt-10 hover:text-pink-500 cursor-pointer" />
-          </a>
+    <footer className="relative bg-gradient-to-b from-[#0a0a0a] to-black text-gray-300 pt-16 pb-10 px-6 md:px-12 lg:px-20 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        {/* ========= Left: Address ========= */}
+        <div className="space-y-3">
+          <h3 className="text-lg font-semibold text-white uppercase tracking-widest">
+            Find Us
+          </h3>
+          <p>107 Frisby Road</p>
+          <p>Leicester, LE5</p>
+
+          <div className="pt-4">
+            <a
+              href="https://www.instagram.com/knucklebuster_nikita/channel/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium hover:text-[#D9C814] transition-all duration-300"
+            >
+              <div className="p-3 bg-gray-800 hover:bg-[#D9C814] hover:text-black rounded-full transition-all duration-300">
+                <FaInstagram className="text-xl" />
+              </div>
+              Follow us on Instagram
+            </a>
+          </div>
         </div>
 
-        {/* Center - Pages */}
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-black dark:text-gray-200 mb-10">Pages</h3>
-          <a href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Home</a>
-          <a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About</a>
-          <a href="/gallery" className="hover:text-blue-600 dark:hover:text-blue-400">Gallery</a>
-          <a href="/pricing" className="hover:text-blue-600 dark:hover:text-blue-400">Pricing</a>
-          <a href="/services" className="hover:text-blue-600 dark:hover:text-blue-400">Services</a>
-          <a href="/contact" className="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+        {/* ========= Center: Navigation ========= */}
+        <div className="space-y-3">
+          <h3 className="text-lg font-semibold text-white uppercase tracking-widest">
+            Quick Links
+          </h3>
+          <ul className="grid grid-cols-2 sm:grid-cols-1 gap-2 text-sm font-medium">
+            {[
+              { name: "Home", link: "/" },
+              { name: "About", link: "/about" },
+              { name: "Gallery", link: "/gallery" },
+              { name: "Pricing", link: "/pricing" },
+              { name: "Services", link: "/services" },
+              { name: "Contact", link: "/contact" },
+            ].map((page, i) => (
+              <li key={i}>
+                <a
+                  href={page.link}
+                  className="group flex items-center gap-2 hover:text-[#D9C814] transition-all duration-300"
+                >
+                  <span className="w-0 group-hover:w-3 h-0.5 bg-[#D9C814] transition-all duration-300"></span>
+                  {page.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Right - Contact + Rating */}
-        <div className="flex flex-col gap-4">
-          {/* Email + Phone */}
-          <div className="flex flex-col gap-2">
-            {/* Email link */}
-            <div className="flex justify-between items-center border-b pb-1 group cursor-pointer hover:border-[#D9C814] transition-all duration-200 dark:border-gray-800">
-              <a href="mailto:Gags@nikitaautocraft.co.uk" target='_blank' className="group-hover:translate-x-5.5 transition-transform duration-500">
+        {/* ========= Right: Contact + Rating ========= */}
+        <div className="space-y-6">
+          <h3 className="text-lg font-semibold text-white uppercase tracking-widest">
+            Get In Touch
+          </h3>
+
+          <div className="space-y-3">
+            {/* Email */}
+            <div className="flex justify-between items-center border-b border-gray-700 pb-2 group">
+              <a
+                href="mailto:Gags@nikitaautocraft.co.uk"
+                className="text-sm hover:text-[#D9C814] transition-all duration-300"
+              >
                 Gags@nikitaautocraft.co.uk
               </a>
-              <FaArrowRight className="group-hover:-translate-x-5.5 transition-transform duration-500" />
+              <FaArrowRight className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 text-[#D9C814] transition-all duration-300" />
             </div>
 
-            {/* Phone number with WhatsApp link */}
-            <div className="flex justify-between items-center border-b pb-1 group cursor-pointer hover:border-[#D9C814] transition-all duration-200 dark:border-gray-800">
+            {/* Phone */}
+            <div className="flex justify-between items-center border-b border-gray-700 pb-2 group">
               <a
                 href="tel:01162512277"
-                target='_blank'
-                className="group-hover:translate-x-5.5 transition-transform duration-500"
+                className="text-sm hover:text-[#D9C814] transition-all duration-300"
               >
                 0116 251 2277
               </a>
-              <FaArrowRight className="group-hover:-translate-x-5.5 transition-transform duration-500" />
+              <FaArrowRight className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 text-[#D9C814] transition-all duration-300" />
             </div>
           </div>
 
-          {/* Review */}
-          <div className="flex flex-nowrap items-center gap-3 border-gray-300 dark:border-gray-700 border rounded-full px-6 py-2.5 w-fit self-center md:self-start whitespace-nowrap overflow-x-auto">
+          {/* Rating Badge */}
+          <div className="flex items-center gap-3 border border-gray-700 rounded-full px-5 py-2 w-fit shadow-[0_0_15px_rgba(217,200,20,0.3)] bg-[#0e0e0e] mx-auto sm:mx-0">
             <div className="flex text-[#D9C814] text-sm">
-              {[...Array(5)].map((_, i) => <FaStar key={i} />)}
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} />
+              ))}
             </div>
-            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">4.3/5 from</span>
-            <span className="bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-200 rounded-full px-2 py-1 text-xs">20+ Reviews</span>
+            <span className="text-sm font-semibold text-gray-100">4.3/5</span>
+            <span className="bg-gray-800 text-gray-300 rounded-full px-2 py-0.5 text-xs">
+              20+ Reviews
+            </span>
           </div>
         </div>
       </div>
 
-      {/* Bottom */}
-      <div className="mt-10 text-center text-gray-500 dark:text-gray-400 text-sm">
-        © 2025 Nikita Autocraft. All rights reserved. Partnered with{" "}
+      {/* ===== Divider Line ===== */}
+      <div className="border-t border-gray-800 mt-14 mb-6"></div>
+
+      {/* ===== Bottom Text ===== */}
+      <div className="text-center text-xs sm:text-sm text-gray-500">
+        © 2025{" "}
+        <span className="text-gray-100 font-semibold">Nikita Autocraft</span>. All Rights
+        Reserved. <br className="sm:hidden" />
+        Partnered with{" "}
         <a
-          href="https://www.ansely.co.uk"    // <-- change this to the correct website if different!
+          href="https://www.ansely.co.uk"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black dark:text-[#D9C814] font-semibold hover:underline hover:text-yellow-700 dark:hover:text-yellow-300 transition"
+          className="text-[#D9C814] hover:text-yellow-400 font-medium transition-all"
         >
           Ansely
         </a>
