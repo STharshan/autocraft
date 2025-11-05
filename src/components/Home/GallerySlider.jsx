@@ -29,6 +29,11 @@ export default function GallerySlider() {
     }
   }, [index]);
 
+  // ✅ Function to redirect to /gallery
+  const handleExploreGallery = () => {
+    window.location.href = "/gallery";
+  };
+
   return (
     <section className="relative w-full overflow-hidden h-[420px] md:h-[680px] font-['Exo_2',sans-serif]">
       {/* Background Images */}
@@ -67,8 +72,9 @@ export default function GallerySlider() {
           See our impressive work on various vehicles, before and after.
         </p>
 
-        {/* Button */}
+        {/* ✅ Button that navigates to /gallery */}
         <button
+          onClick={handleExploreGallery}
           data-aos="zoom-in"
           className="relative bg-[#1A1A1A] text-white font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition-all duration-300 group overflow-hidden"
         >

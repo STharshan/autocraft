@@ -9,6 +9,11 @@ export default function AboutSection() {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
+  // ✅ Redirect function to go to /about
+  const handleLearnMore = () => {
+    window.location.href = "/about";
+  };
+
   return (
     <section className="relative w-full bg-white dark:bg-black overflow-hidden font-['Exo_2',sans-serif] py-20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16 px-6 md:px-8">
@@ -34,13 +39,21 @@ export default function AboutSection() {
 
           {/* Feature list */}
           <div className="flex flex-wrap items-center gap-8 text-[15px] text-[#222222] dark:text-gray-100">
-            <span className="flex items-center gap-2" data-aos="fade-up" data-aos-delay="200">
+            <span
+              className="flex items-center gap-2"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <span className="bg-[#E4D12E] p-1 flex items-center justify-center">
                 <FaArrowRight className="text-black w-3 h-3" />
               </span>
               Reliable Work
             </span>
-            <span className="flex items-center gap-2" data-aos="fade-up" data-aos-delay="400">
+            <span
+              className="flex items-center gap-2"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <span className="bg-[#E4D12E] p-1 flex items-center justify-center">
                 <FaArrowRight className="text-black w-3 h-3" />
               </span>
@@ -48,8 +61,9 @@ export default function AboutSection() {
             </span>
           </div>
 
-          {/* Custom Button */}
+          {/* ✅ Custom Button with redirect */}
           <button
+            onClick={handleLearnMore}
             data-aos="zoom-in"
             data-aos-delay="600"
             className="relative bg-[#1A1A1A] dark:bg-gray-100 text-white dark:text-black cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition group overflow-hidden"
@@ -57,7 +71,7 @@ export default function AboutSection() {
             <span className="text-[#D9C814] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-75 inline-block">
               /
             </span>
-            <span className="tracking-wider text-sm transition-transform  duration-300 transform group-hover:translate-x-2 group-hover:text-[#D9C814]">
+            <span className="tracking-wider text-sm transition-transform duration-300 transform group-hover:translate-x-2 group-hover:text-[#D9C814]">
               LEARN MORE
             </span>
           </button>
@@ -101,7 +115,7 @@ export default function AboutSection() {
           </div>
 
           {/* Yellow borders */}
-          <div className="absolute right-0 bottom-0 w-[14px] h-[80%] bg-linear-to-b from-[#E4D12E] to-transparent"></div>
+          <div className="absolute right-0 bottom-0 w-[14px] h-[80%] bg-gradient-to-b from-[#E4D12E] to-transparent"></div>
           <div className="absolute right-0 bottom-0 h-[15px] w-[80%] bg-[#E4D12E]"></div>
 
           {/* Inset small mechanic image */}

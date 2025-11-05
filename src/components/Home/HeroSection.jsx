@@ -10,6 +10,11 @@ export default function HeroSection() {
     AOS.init({ duration: 1200, once: true }); // Initialize AOS
   }, []);
 
+  // ✅ WhatsApp redirect function
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/+447930105858", "_blank");
+  };
+
   return (
     <section className="relative w-full h-[140vh] overflow-hidden font-sans text-white">
       {/* 🎥 Video Background */}
@@ -44,11 +49,12 @@ export default function HeroSection() {
           Your One-Stop Auto Repair Shop
         </p>
 
-        {/* CTA Button */}
+        {/* ✅ CTA Button → Opens WhatsApp */}
         <button
+          onClick={handleWhatsAppClick}
           data-aos="zoom-in"
           data-aos-delay="400"
-          className="relative bg-[#1a1a1a] text-white cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition overflow-hidden group"
+          className="relative bg-[#1a1a1a] text-white cursor-pointer font-semibold px-8 py-3 rounded-full inline-flex items-center gap-3 transition overflow-hidden group hover:bg-[#D9C814]/10 border border-[#D9C814]/30"
         >
           <span className="text-[#D9C814] font-bold text-lg leading-none transition-transform duration-300 group-hover:rotate-[65deg] inline-block">
             /
@@ -76,7 +82,7 @@ export default function HeroSection() {
       </div>
 
       {/* 📊 Bottom Stats Bar */}
-      <div className="absolute bottom-0 w-full z-30 border-t border-white/10 py-5 px-4 md:px-8 bg-linear-to-t from-black/50 to-transparent">
+      <div className="absolute bottom-0 w-full z-30 border-t border-white/10 py-5 px-4 md:px-8 bg-gradient-to-t from-black/50 to-transparent">
         <div className="max-w-6xl mx-auto flex justify-center items-center gap-8 text-white text-sm md:text-base">
           {/* Leicester Team */}
           <div
@@ -104,19 +110,14 @@ export default function HeroSection() {
             data-aos="fade-left"
             className="flex items-center gap-3 border border-white/20 rounded-full px-5 py-2"
           >
-            {/* Stars */}
             <div className="flex text-[#D9C814] text-sm space-x-0.5">
               {[...Array(5)].map((_, i) => (
                 <span key={i}>★</span>
               ))}
             </div>
-
-            {/* Rating Text */}
             <span className="text-white text-sm whitespace-nowrap">
               4.3/5 from
             </span>
-
-            {/* Reviews Badge */}
             <span className="text-white text-xs px-4 rounded-full border py-1.5 border-white/20 font-semibold whitespace-nowrap">
               20+ Reviews
             </span>
