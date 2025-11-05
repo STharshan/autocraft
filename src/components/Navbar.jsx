@@ -24,7 +24,14 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-black dark:bg-[#242427]  px-4 text-white dark:text-white font-semibold shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <img src="/logo.avif" alt="Logo" className="h-15 object-contain xl:ml-15" />
+       <a href="/" className="flex items-center">
+          <img
+            src="/logo.avif"
+            alt="Logo"
+            className="h-15 object-contain xl:ml-15 cursor-pointer hover:opacity-80 transition-opacity duration-300"
+          />
+        </a>
+
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 ">
