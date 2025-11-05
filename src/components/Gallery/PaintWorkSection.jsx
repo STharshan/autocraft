@@ -23,7 +23,7 @@ const PaintWorkSection = () => {
   };
 
   return (
-    <section className="bg-white dark:bg-black py-20 px-4 text-center relative transition-colors">
+    <section className="bg-white dark:bg-black py-20 px-4 text-center relative transition-colors" id="paint-work">
       {/* Title */}
       <h2 className="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-3">PAINT WORK</h2>
       <p className="text-gray-500 dark:text-gray-300 text-sm sm:text-base max-w-sm mx-auto mb-12 mt-10">
