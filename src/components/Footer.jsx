@@ -11,12 +11,21 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-white uppercase tracking-widest">
             Find Us
           </h3>
-          <p>107 Frisby Road</p>
-          <p>Leicester, LE5</p>
-
+          <a
+            href="https://maps.app.goo.gl/SCZ5yiTx4td4c9XD9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#D9C814] transition-all duration-300 block"
+          >
+            <div>
+              <p>107 Frisby Rd,</p>
+              <p>Leicester LE5 0DQ,</p>
+              <p>United Kingdom</p>
+            </div>
+          </a>
           <div className="pt-4">
             <a
-              href="https://www.instagram.com/knucklebuster_nikita/channel/"
+              href="https://www.instagram.com/nikitaautocraft/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium hover:text-[#D9C814] transition-all duration-300"
@@ -102,42 +111,42 @@ const Footer = () => {
       </div>
 
       {/* ===== Divider Line ===== */}
-       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Nikita Autocraft. All rights reserved.</p>
+      <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Nikita Autocraft. All rights reserved.</p>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="mt-2 flex flex-col sm:flex-row justify-center items-center gap-3 text-center font-semibold text-gray-400">
+        {/* Left: Terms & Privacy */}
+        <div className="flex gap-4 text-sm">
+          <Link
+            to="/terms"
+            className="text-gray-400 hover:text-[#D9C814] transition duration-300"
+          >
+            Terms & Conditions
+          </Link>
+          <span className="text-gray-500">|</span>
+          <Link
+            to="/privacy"
+            className="text-gray-400 hover:text-[#D9C814] transition duration-300"
+          >
+            Privacy Policy
+          </Link>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-2 flex flex-col sm:flex-row justify-center items-center gap-3 text-center font-semibold text-gray-400">
-          {/* Left: Terms & Privacy */}
-          <div className="flex gap-4 text-sm">
-            <Link
-              to="/terms"
-              className="text-gray-400 hover:text-[#D9C814] transition duration-300"
-            >
-              Terms & Conditions
-            </Link>
-            <span className="text-gray-500">|</span>
-            <Link
-              to="/privacy"
-              className="text-gray-400 hover:text-[#D9C814] transition duration-300"
-            >
-              Privacy Policy
-            </Link>
-          </div>
-
-          {/* Center: Powered by Ansely (unchanged) */}
-          <p className="text-center font-semibold text-gray-400">
-            Powered by{" "}
-            <a
-              href="https://www.ansely.co.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#D9C814] hover:underline"
-            >
-              Ansely
-            </a>
-          </p>
-        </div>
+        {/* Center: Powered by Ansely (unchanged) */}
+        <p className="text-center font-semibold text-gray-400">
+          Powered by{" "}
+          <a
+            href="https://www.ansely.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D9C814] hover:underline"
+          >
+            Ansely
+          </a>
+        </p>
+      </div>
     </footer>
   );
 };
