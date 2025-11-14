@@ -5,7 +5,7 @@ import { BsArrowRightShort } from 'react-icons/bs';
 const PricingHeader = () => {
   return (
     <section
-      className="relative bg-cover bg-center min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+      className="relative bg-cover bg-center h-[80vh] lg:h-[100vh]  flex items-center justify-center px-4 sm:px-6 lg:px-8"
       style={{
         backgroundImage: `url('/car.jpg')`,
         backgroundRepeat: 'no-repeat',
@@ -17,7 +17,7 @@ const PricingHeader = () => {
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-3xl mt-50">
+      <div className="relative z-10 text-center text-white max-w-3xl mt-5">
         {/* Rating Badge */}
         <div className="mb-6 inline-flex items-center gap-3 bg-black border-gray-900 border-1 bg-opacity-80 rounded-full px-5 py-2 text-sm font-medium">
           <div className="flex text-yellow-400 space-x-1">

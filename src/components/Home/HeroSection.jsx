@@ -15,7 +15,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full h-[70vh] lg:h-[100vh] overflow-hidden font-sans text-white">
+    <section className="relative w-full h-[80vh] lg:h-[100vh] overflow-hidden font-sans text-white">
       {/* Video Background */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"

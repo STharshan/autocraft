@@ -5,7 +5,7 @@ import { BsArrowRightShort } from 'react-icons/bs';
 const Nikita = () => {
   return (
     <section
-      className="relative bg-cover bg-center min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+      className="relative bg-cover bg-center h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8"
       style={{
         backgroundImage: `url('/car.jpg')`,
         backgroundRepeat: 'no-repeat',
@@ -17,7 +17,7 @@ const Nikita = () => {
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-3xl mt-50">
+      <div className="relative z-10 text-center text-white max-w-3xl mt-5">
 
         {/* Heading */}
         <h2 className="text-4xl md:text-7xl font-semibold text-blue-400 mb-10">NIKITA</h2>
