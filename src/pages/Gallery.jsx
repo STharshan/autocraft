@@ -1,6 +1,5 @@
 import React from 'react'
 import PaintWorkSection from '../components/Gallery/PaintWorkSection'
-import BodyWorkSection from '../components/Gallery/BodyWorkSection'
 import GalleryHeader from '../components/Gallery/GalleryHeader'
 
 const Gallery = () => {
@@ -8,7 +7,6 @@ const Gallery = () => {
     <div>
       <GalleryHeader />
       <PaintWorkSection />
-      <BodyWorkSection />
     </div>
   )
 }
