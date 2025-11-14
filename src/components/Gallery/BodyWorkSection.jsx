@@ -24,7 +24,7 @@ const BodyWorkSection = () => {
       <div className="overflow-hidden">
         <div className="flex w-max animate-slide-left gap-4 px-2">
           {Array(10)
-            .fill('/comesoon.webp') // 👈 your image path
+            .fill('/comesoon.jpg') // 👈 your image path
             .map((src, idx) => (
               <img
                 key={idx}

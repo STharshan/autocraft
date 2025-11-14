@@ -91,7 +91,7 @@ export default function AboutSection() {
         <div data-aos="fade-left" className="relative">
           {/* Main image */}
           <img
-            src="/green.webp"
+            src="/green.jpg"
             alt="Car spray work"
             className="w-full rounded-sm object-cover grayscale dark:opacity-90 transition-opacity duration-300"
           />
@@ -120,7 +120,7 @@ export default function AboutSection() {
 
           {/* Inset small mechanic image */}
           <img
-            src="/carmechanic.avif"
+            src="/carmechanic.jpg"
             alt="Mechanic detail"
             className="absolute bottom-8 -left-10 w-30 h-30 border border-gray-300 dark:border-gray-700 shadow-md z-20"
           />

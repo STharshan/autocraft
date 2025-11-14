@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const images = ["/gray.avif", "/work.avif", "/paint.webp", "/homepaint.avif"];
+const images = ["/gray.jpg", "/work.jpg", "/paint.jpg", "/homepaint.jpg"];
 
 export default function GallerySlider() {
   const [index, setIndex] = useState(0);

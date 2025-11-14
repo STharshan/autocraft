@@ -7,7 +7,7 @@ const Nikita = () => {
     <section
       className="relative bg-cover bg-center min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
       style={{
-        backgroundImage: `url('/car.avif')`,
+        backgroundImage: `url('/car.jpg')`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',

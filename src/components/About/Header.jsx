@@ -7,7 +7,7 @@ const Header = () => {
     <section
       className="relative bg-cover bg-center min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
       style={{
-        backgroundImage: `url('/gray.avif')`,
+        backgroundImage: `url('/gray.jpg')`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',

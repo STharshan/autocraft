@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img
-            src="/logo.avif"
+            src="/logo.png"
             alt="Logo"
             className="h-15 object-contain xl:ml-15 cursor-pointer hover:opacity-80 transition-opacity duration-300"
           />

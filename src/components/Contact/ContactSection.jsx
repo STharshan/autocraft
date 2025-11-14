@@ -66,7 +66,7 @@ const ContactSection = () => {
         {/* Logo */}
         <div className="flex justify-center mb-4">
           <img
-            src="/logo.avif"
+            src="/logo.jpg"
             alt="Logo"
             className="w-15 h-15 object-contain bg-yellow-300 rounded"
           />

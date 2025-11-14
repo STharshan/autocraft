@@ -25,14 +25,14 @@ const PrecisionRepairs = () => {
         >
           {/* Top Left Image */}
           <img
-            src="/graypaint.avif"
+            src="/graypaint.jpg"
             alt="Spraying"
             className="w-full h-full object-cover grayscale"
           />
 
           {/* Top Right Image */}
           <img
-            src="/car.avif"
+            src="/car.jpg"
             alt="Cars"
             className="w-full h-full object-cover grayscale"
           />
@@ -59,7 +59,7 @@ const PrecisionRepairs = () => {
 
           {/* Bottom Right Image */}
           <img
-            src="/carmechanic.avif"
+            src="/carmechanic.jpg"
             alt="Tools"
             className="w-full h-full object-cover grayscale"
           />

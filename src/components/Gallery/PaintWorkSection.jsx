@@ -2,19 +2,19 @@ import React, { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Phone } from 'lucide-react';
 
 const paintImages = [
-  '/green.webp',
+  '/green.jpg',
   '/a1.png',
   '/a2.png',
-  '/work.avif',
+  '/work.jpg',
   '/a3.png',
   '/a4.png',
-  '/bule.avif',
+  '/bule.jpg',
   '/a5.png',
-  '/gray.avif',
+  '/gray.jpg',
   '/a6.png',
-  '/red.avif',
+  '/red.jpg',
   '/a7.png',
-  '/shine.webp',
+  '/shine.jpg',
 ];
 
 const PaintWorkSection = () => {

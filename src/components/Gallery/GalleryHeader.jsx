@@ -48,13 +48,13 @@ export default function GallerySection() {
       {/* Top-right image */}
       <div
         className="absolute top-0 right-0 w-1/2 h-1/2 bg-no-repeat bg-cover bg-right"
-        style={{ backgroundImage: "url('/gray.avif')" }}
+        style={{ backgroundImage: "url('/gray.jpg')" }}
       ></div>
 
       {/* Bottom-left image */}
       <div
         className="absolute -bottom-10 left-0 w-1/2 h-1/2 bg-no-repeat bg-cover bg-left"
-        style={{ backgroundImage: "url('/paint.webp')" }}
+        style={{ backgroundImage: "url('/paint.jpg')" }}
       ></div>
 
       {/* Content */}
