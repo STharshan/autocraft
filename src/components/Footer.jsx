@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-[#0a0a0a] to-black text-gray-300 pt-16 pb-10 px-6 md:px-12 lg:px-20 border-t border-gray-800">
+    <footer className="relative bg-linear-to-b from-[#0a0a0a] to-black text-gray-300 pt-16 pb-10 px-6 md:px-12 lg:px-20 border-t border-gray-800">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {/* ========= Left: Address ========= */}
         <div className="space-y-3">

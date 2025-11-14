@@ -131,7 +131,7 @@ const scroll = (direction) => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent dark:via-black/80 transition duration-500"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent dark:via-black/80 transition duration-500"></div>
 
               {/* Content */}
               <div className="absolute bottom-0 p-6 sm:p-8 z-10 bg-[#212121]/90 backdrop-blur-sm">

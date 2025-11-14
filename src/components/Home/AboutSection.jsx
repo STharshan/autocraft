@@ -115,7 +115,7 @@ export default function AboutSection() {
           </div>
 
           {/* Yellow borders */}
-          <div className="absolute right-0 bottom-0 w-[14px] h-[80%] bg-gradient-to-b from-[#E4D12E] to-transparent"></div>
+          <div className="absolute right-0 bottom-0 w-[14px] h-[80%] bg-linear-to-b from-[#E4D12E] to-transparent"></div>
           <div className="absolute right-0 bottom-0 h-[15px] w-[80%] bg-[#E4D12E]"></div>
 
           {/* Inset small mechanic image */}
