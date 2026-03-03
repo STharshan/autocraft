@@ -1,4 +1,4 @@
-import React from "react";
+linear
 import { FaInstagram, FaArrowRight, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 

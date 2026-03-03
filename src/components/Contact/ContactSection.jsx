@@ -1,4 +1,4 @@
-import React from "react";
+linear
 import { BiLocationPlus } from "react-icons/bi";
 import { FaArrowRight, FaInstagram } from "react-icons/fa";
 

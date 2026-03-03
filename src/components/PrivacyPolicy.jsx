@@ -112,7 +112,7 @@ const PrivacyPolicy = () => {
                     <div className="text-white">
                         <p><strong>Nikita Autocraft</strong></p>
                         <p>Email: <a href="mailto:Gags@nikitaautocraft.co.uk" className="text-[#D9C814] hover:underline">Gags@nikitaautocraft.co.uk</a></p>
-                        <p>Phone: 07930105858</p>
+                        <p>Phone: 0116 251 2277</p>
                         <p>Address: 107 Frisby Rd, Leicester LE5 0DQ</p>
                     </div>
                     <p className="mt-2 text-white">
