@@ -1,5 +1,4 @@
-// src/pages/TermsConditions.js
-linear
+
 
 const TermsConditions = () => {
   return (
